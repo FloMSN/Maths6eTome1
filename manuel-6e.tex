@@ -1,0 +1,232 @@
+\documentclass[TS]{sesamanuel}
+
+% modifications dans la classe (fichier sesamanuel.cls) :
+% 	1) ligne 2873, la ligne de remise à zéro du compteur de chapitre a été commentée pour "themaG"
+% 	2) création d'une boîte à connaître à la ligne 3471
+%	3) ligne 2141 : définition de trois couleurs utilisé par les anciennes figures libreoffice
+%	4) ligne 179 et 180 ajout de 2 lignes pour utiliser la police pazocal qui modifie les caractères calligraphiés en mode math
+%		du coup : \mathcal{C} donne un C fortement calligraphié et \pazocal{C} donne l'habituel C calligraphié de mathcal
+%	5) suppression du texte et du logo dans le titre des QCM d'autoévaluation "Ressources dispo sur sesamaths..." :
+%		lignes 3117 et 4396 : commande \StringManuel est commentée
+%		lignes 3122 et 4401 : je n'ai pas supprimé le \LogoManuel (une @) mais j'ai changé sa couleur de U4 à Blanc (à la ligne 2702)
+
+% modifications dans le fichier commandesTikZ :
+% lignes 31 et 32 pour ajouter la commande \circled qui entoure un caractère
+
+
+
+%%%%%%%
+%Rajouté le 12/06/2018 SV et BN pour compilation espace insécable sous linux 
+\DeclareUnicodeCharacter{00A0}{~} %pour remplacer les espaces insécables
+\DeclareUnicodeCharacter{2011}{-}
+%\usepackage{pdfpages}
+%%%%%%%
+
+
+%#######################################################################
+%################# Options de compilation
+%#######################################################################
+
+\def\ChoixDeVersion{eleve} % soit {prof} et alors les commentaires profs sont ajoutés, soit autre chose
+
+\newcommand{\prof}[1]{
+        \ifthenelse{
+                \equal{\ChoixDeVersion}{prof}
+                }{\vspace{6pt}
+                
+                \vspace{12pt}\includegraphics[angle=0,width=1.5cm]{./Images/prof} \textbf{Professeur :} \textsl{#1}
+                
+                \vspace{12pt}}{}
+}
+
+% remarque : pour compiler
+% latex --jobname=NomFichierSortie '\def\ChoixDeVersion{prof}\input{FichierSource.tex}'      
+
+
+
+\input{commandes-manuel-TS} % pour l'instant on garde sinon les corrigés ne sont
+						% pas dans classés dans un dossier "correction"
+\input{commandes-tikz}
+
+\graphicspath{%
+  {ex1/figures/}%
+  {NombresEntiersDecimaux/figures/}%
+  {OperationsNombresEntiersDecimaux/figures/}%
+  {PointsSegmentsDroites/figures/}%
+  {PrioritesOperations/figures/}%
+  {Triangles/figures/}%
+  {NbsEntiers_Multiples_Diviseurs/figures/}%
+  {Quadrilateres/figures/}%
+  {NbsRelatifs/figures/}%
+  {PerimetresAires/figures/}%
+  {Images/}%
+}
+
+
+% création d'un nouveau thème "calcul" pour le document
+\NewThema{C}{c}{calcul}{Calcul}{CALCUL}{PartieFonction}{A3}
+
+\renewcommand\ListeMethodesThemes{{c}{C},{g}{G}}
+\renewcommand*\StringListeMethode{M\'ethodes du livret 1}
+
+% création d'un nouveau thème "Manuel" pour le sommaire
+\NewThema{M}{m}{manuel}{Manuel}{MANUEL}{PartieFonction}{A3}
+
+\DecimalMathComma
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%
+%Couverture inclusion page entière en eps
+\pagestyle{empty}
+
+\includegraphics[width=.92\textwidth]{couverture}
+
+\newpage \pagestyle{empty}
+\addto\captionsfrench{\renewcommand{\contentsname}{Sommaire}}
+
+%\setcounter{tocdepth}{2}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Table des matières
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\themaM %thème déclaré en début de document
+\colorlet{ChapterNumColor}{PartieFonction}
+\chapter{Manuel de 6e\\Tome 1}
+
+\vfill
+
+\begin{commentaire}
+
+
+\textcolor{PartieFonction}{\PrerequisTitleFont 
+Chapitre \ref{ChNbEntiersDecimaux}: Rappels sur les Nombres \dotfill\ page\pageref{ChNbEntiersDecimaux}}
+
+\vspace{2em}
+
+\textcolor{PartieFonction}{\PrerequisTitleFont 
+Chapitre \ref{ChOpNbEntDec}: Opérations avec les nombres décimaux \dotfill\ page \pageref{ChOpNbEntDec}}
+
+\vspace{2em}
+
+\textcolor{PartieGeometrie}{\PrerequisTitleFont 
+Chapitre \ref{ChDroitesAngles}: Points, segments, droites et angles \dotfill\ page \pageref{ChDroitesAngles}}
+
+\vspace{2em}
+
+\textcolor{PartieFonction}{\PrerequisTitleFont 
+Chapitre \ref{ChPrioritesOperations}: Priorités des opérations \dotfill\ page \pageref{ChPrioritesOperations}}
+
+\vspace{2em}
+
+\textcolor{PartieGeometrie}{\PrerequisTitleFont 
+Chapitre \ref{ChTriangles}: Triangles \dotfill\ page \pageref{ChTriangles}}
+
+\vspace{2em}
+
+\textcolor{PartieFonction}{\PrerequisTitleFont 
+Chapitre \ref{ChNbEntiersMultDiv}: Nombres entiers, multiples, diviseurs \dotfill\ page \pageref{ChNbEntiersMultDiv}}
+
+\vspace{2em}
+
+\textcolor{PartieGeometrie}{\PrerequisTitleFont 
+Chapitre \ref{ChQuadrilateres}: Quadrilatères \dotfill\ page \pageref{ChQuadrilateres}}
+
+\vspace{2em}
+
+\textcolor{PartieFonction}{\PrerequisTitleFont 
+Chapitre \ref{ChNbRelatifs}: Nombres relatifs \dotfill\ page \pageref{ChNbRelatifs}}
+
+\vspace{2em}
+
+\textcolor{PartieGeometrie}{\PrerequisTitleFont 
+Chapitre \ref{ChPerimetresAires}: Périmètres et aires \dotfill\ page \pageref{ChPerimetresAires}}
+
+\vspace{2em}
+\textcolor{PartieFonction}{\PrerequisTitleFont 
+Chapitre \ref{ChDurees}: Opérations sur les durées \dotfill\ page\pageref{ChDurees}}
+
+\end{commentaire}
+
+\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Fin table des matières
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Page Sesamath
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+\begin{prerequis}[Un manuel de l'association Sésamath]
+\begin{itemize}
+\item  Ce manuel est adapté en partie du manuel Sésamath de l'association Sésamath:\\
+\texttt{http://manuel.sesamath.net/}
+\item … Et de l'association Sésamath Suisse romande:\\ \texttt{http://www.sesamath.ch/}
+\item L'Institut Florimont a réalisé la transcription dans le langage de description de documents libre et gratuit \LaTeX{} en utilisant la classe \texttt{sesamanuel} développée par l'association Sésamath;
+\item E. Villié a réalisé la couverture pour l'Institut Florimont;
+\item Version juin 2018 --- Institut Florimont (Genève).
+\end{itemize}
+ \end{prerequis}
+
+\vspace{10em}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Fin page Sesamath
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\colorlet{ChapterNumColor}{white}
+\setcounter{chapter}{0}
+
+\themaC
+\themaG
+
+
+\setcounter{page}{6}
+
+\themaC
+\include{NombresEntiersDecimaux/NbEntiersDecimaux}
+
+\themaC
+\include{OperationsNombresEntiersDecimaux/OpNbEntDec}
+
+\themaG
+\include{PointsSegmentsDroites/PointsSegmentsDroites}
+
+\themaC
+\include{PrioritesOperations/PrioritesOperations}
+
+\themaG
+\include{Triangles/Triangles}
+
+\themaC
+\include{NbsEntiers_Multiples_Diviseurs/NbsEntiers_Multiples_Diviseurs}
+
+\themaG
+\include{Quadrilateres/Quadrilateres}
+
+\themaC
+\include{NbsRelatifs/NbsRelatifs}
+
+\themaG
+\include{PerimetresAires/PerimetresAires}
+
+%\themaC
+%\include{Durees/Durees}
+
+\AfficheListeMethodes
+\AfficheCorriges[2]
+\AfficheLexique
+
+\end{document}
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: t
+%%% End: 
