@@ -1,0 +1,14 @@
+\begin{tikzpicture}[rotate=0,every node/.style={scale=0.9}]
+
+\coordinate (E) at (0,0);
+\coordinate (G) at (1.42,0.97);
+\coordinate (A) at (2.84,0);
+\coordinate (L) at (1.42,-0.97);
+
+
+
+\draw[decorate,decoration={random steps,amplitude=1pt,segment length=10pt}] (E) node [left]{E}--(G) node [above]{G}--(A) node [right] {A}--(L) node [below] {L}--cycle;
+
+\draw (2.55,0.18) arc (145:215:0.3) node [midway, left=5pt] {32°};
+\path (E)--(G) node[midway,above,sloped]{3,2};
+\end{tikzpicture}

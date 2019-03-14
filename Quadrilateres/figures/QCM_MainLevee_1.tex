@@ -1,0 +1,20 @@
+\begin{tikzpicture}[rotate=0,every node/.style={scale=1}]
+
+\tikzstyle{MainLevee}=[decorate,decoration={random steps,amplitude=1pt,segment length=10pt}]
+
+\coordinate (A) at (0,0);
+\coordinate (B) at (45:1.8);
+\coordinate (C) at (0:2);
+\coordinate (D) at (-45:1.8);
+
+\draw[MainLevee] (A) -- (B) -- (C) -- (D) --cycle;
+
+\draw (45:0.3) arc (45:-45:0.3) node[midway]{$\circ$};
+\draw (1.85,0.26) arc (119.74:240.27:0.3)node[midway]{$\circ$};
+
+\draw (1.06,1.06) arc (-135:-61.74:0.3);
+\draw (.99,.99) arc (-135:-61.74:0.4);
+\draw (1.42,-1.0) arc (60.26:134:0.3);
+\draw (1.47,-0.92) arc (60.26:134:0.4);
+
+\end{tikzpicture}

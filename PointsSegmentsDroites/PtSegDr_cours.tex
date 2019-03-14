@@ -8,7 +8,7 @@ Trace une droite $d$ et place un point $M$ n'appartenant pas à la droite $d$.
 Trace la droite $d'$ perpendiculaire à la droite $d$ passant par le point $M$. \\[0.75em]
 
 \begin{tabularx}{\textwidth}{X|X|X|X}
-\includegraphics[width=2.4cm]{droiteMxd} &  \includegraphics[width=2.4cm]{equerre} & \includegraphics[width=2.4cm]{regle} &  \includegraphics[width=2.4cm]{angledMd}\\ 
+\input{./PointsSegmentsDroites/figures/TracerPerp_1} &  \input{./PointsSegmentsDroites/figures/TracerPerp_2} & \input{./PointsSegmentsDroites/figures/TracerPerp_3}  &  \input{./PointsSegmentsDroites/figures/TracerPerp_4} \\ 
  On trace une droite $d$ et on place un point $M$. & On place l'un des côtés de l'angle droit de l'équerre sur la droite $d$ et l'autre côté sur $M$.
  & On prolonge la droite à la règle. & On nomme la droite $d'$ et on code l'angle droit par un carré.\\
 
@@ -37,9 +37,10 @@ Trace une droite $d$ et place un point $M$ n'appartenant pas à la droite $d$.
 
 Trace la droite $d'$ parallèle à la droite $d$ passant par le point $M$. \\[0.75em]
 
-\begin{tabularx}{\textwidth}{X|X|X|X}
-\includegraphics[width=2.4cm]{droiteMd} &  \includegraphics[width=2.4cm]{equerreMd} & \includegraphics[width=2.4cm]{equerre_regle} &  \includegraphics[width=2.4cm]{2droites}\\ 
-On trace une droite $d$ et on place un point $M$. & On place l'un des côtés de l'angle droit de l'équerre sur la droite $d$. & On fait coulisser l'équerre le long de la règle, jusqu'au point $M$, sans bouger la règle. & On trace ainsi la droite $d'$.\\
+\begin{tabularx}{1.15\textwidth}{X|X|X|X}
+\input{./PointsSegmentsDroites/figures/TracerParal_1}  &  \input{./PointsSegmentsDroites/figures/TracerParal_2} & \input{./PointsSegmentsDroites/figures/TracerParal_3} &  \input{./PointsSegmentsDroites/figures/TracerParal_4}\\ 
+On trace une droite $d$, on place un point $M$. On place l'un des côtés de l'angle droit de l'équerre sur la droite $d$. & On place la règle le long de l'autre côté de l'équerre & On tient bien la règle et on fait coulisser l'équerre le long de la règle, jusqu'au point $M$. & On trace ainsi la droite $d'$ et on obtient :\vspace{0.3em}
+\input{./PointsSegmentsDroites/figures/TracerParal_5}\\
 \end{tabularx} \\
  \end{exemple*1}
 
@@ -121,7 +122,8 @@ La \textbf{\MotDefinition{médiatrice}{}} d'un segment est la droite qui coupe c
 Trace un segment $[OS]$ de longueur 5 cm puis sa médiatrice. \\[0.75em]
 
 \begin{tabularx}{\textwidth}{X|X|X|X}
-\includegraphics[width=2.4cm]{segmentOS} &  \includegraphics[width=2.4cm]{milieu_segmentOS} & \includegraphics[width=2.4cm]{segmentOS_equerre} &  \includegraphics[width=2.4cm]{segmentOS_droit} \\ 
+\input{./PointsSegmentsDroites/figures/Mediatrice1} &
+\input{./PointsSegmentsDroites/figures/Mediatrice2} & \input{./PointsSegmentsDroites/figures/Mediatrice3}  &  \input{./PointsSegmentsDroites/figures/Mediatrice4}  \\ 
 On trace un segment $[OS]$. & On trace le milieu du segment. & On trace la droite perpendiculaire au segment qui passe par ce milieu. & On code l'angle droit par un carré. \\
 \end{tabularx} \\
 
@@ -132,13 +134,15 @@ Trace un segment $[AB]$ de longueur 6 cm. Construis sa médiatrice au compas. \\
 
 \begin{tabular}{l|l|l|l}
  \textcolor{H1}{\circled{1}} &  \textcolor{H1}{\circled{2}} &  \textcolor{H1}{\circled{3}} & \textcolor{H1}{\circled{1}} On trace le segment $[AB]$. \\ 
- \multirow{7}{*}{\includegraphics[width=2cm]{regleA}} &  \multirow{7}{*}{\includegraphics[width=1.5cm]{compasAB}} & \multirow{7}{*}{\includegraphics[width=1.5cm]{mediatriceAB}} &  \textcolor{H1}{\circled{2}} On trace deux arcs de cercle de \\ % exemple de fusion de cellules d'une même colonne
-&&&  centres $A$ et $B$, de même rayon \\ 
-&&& en choisissant un rayon \\
-&&& suffisamment grand pour que ces \\
- &&& arcs se coupent en deux points. \\
-&&& \textcolor{H1}{\circled{3}} La médiatrice de [AB] est la droite \\
-&&&   qui passe par ces deux points.\\ 
+ \multirow{7}{*}{\input{./PointsSegmentsDroites/figures/Mediatrice5}} &  \multirow{7}{*}{\input{./PointsSegmentsDroites/figures/Mediatrice6}} & \multirow{7}{*}{\input{./PointsSegmentsDroites/figures/Mediatrice7}} &  \textcolor{H1}{\circled{2}} On trace deux arcs de cercle\\ % exemple de fusion de cellules d'une même colonne
+&&& de centres $A$ et $B$, de même\\ 
+&&& rayon, en choisissant un\\
+&&& rayon suffisamment grand\\
+&&& pour que ces arcs se coupent\\
+&&&  en deux points.\\ 
+&&& \textcolor{H1}{\circled{3}} La médiatrice de [AB] est \\
+&&&  la droite qui passe par ces\\
+&&& deux points.\\ 
 \end{tabular} \\
 
  \end{exemple*1}
@@ -276,7 +280,7 @@ La \textbf{\MotDefinition{bissectrice}{}} d'un angle est la demi-droite qui a po
 Trace un angle $\widehat{xOy}$. Construis sa bissectrice au compas. \\[0.5em]
 
 \begin{tabularx}{\textwidth}{X|X|X}
- \includegraphics[width=2.4cm]{compasxOy} &  \includegraphics[width=2.4cm]{compas_arcsxOy} & \includegraphics[width=2.4cm]{bissectricexOy} \\ 
+ \input{./PointsSegmentsDroites/figures/BissectriceCours1} &  \input{./PointsSegmentsDroites/figures/BissectriceCours2} & \input{./PointsSegmentsDroites/figures/BissectriceCours3} \\ 
 Au compas, on trace un arc de cercle de centre $O$ qui coupe chaque côté de l'angle en un point. & On trace deux arcs de cercle de même rayon ayant ces deux points pour centres. Ces arcs se coupent en un point. & La bissectrice de l'angle $\widehat{xOy}$ est la demi-droite d'origine $O$ passant par ce point. \\
 \end{tabularx} \\
 
@@ -325,31 +329,3 @@ Cette distance est le \textbf{\MotDefinition{rayon}{}} du cercle.
  \begin{remarque}
  Le diamètre d'un cercle est égal au double de son rayon.
   \end{remarque}
-
-\newpage
-
-\begin{methode*1}[Vocabulaire du cercle]
-
- \begin{exemple*1} \\[0.75em]
-Trace le cercle de centre $T$ passant par le point $U$. \\[0.5em]
-
-\begin{tabularx}{\linewidth}{X|X|X}
- \includegraphics[width=1.8cm]{pointsUT} &  \includegraphics[width=3.2cm]{compasUT} & \includegraphics[width=3.2cm]{cercleUT} \\ 
-  & \multicolumn{1}{|p{3cm}|}{On pointe le compas sur le point $T$ et on écarte le compas jusqu'à ce que la mine soit sur le point $U$.} & On trace le cercle. \\
-\end{tabularx} 
-
- \end{exemple*1}
-
-\exercice 
-
-Trace un rectangle $ABCD$ tel que $AB=6$\,cm et $BC=3$\,cm. Trace les segments $[AC]$ et $[BD]$. On appelle $O$ leur point d'intersection. Trace le cercle de centre $O$ passant par $A$. Que remarques-tu ?
-
-%\correction
-
- 
-\end{methode*1}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-

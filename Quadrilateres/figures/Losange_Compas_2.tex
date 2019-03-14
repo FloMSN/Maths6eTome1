@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=1.2,every node/.style={scale=0.8}]
+
+\draw [thick](0,0) -- (1.5,0.5) -- (1.5,-.5) -- cycle;
+\draw [thick](1.5,0.5)--(3,0) node[midway,above,sloped]{6 cm};
+\draw [thick](3,0) -- (1.5,-0.5) node[midway,below,sloped]{6 cm};
+\node[left] at (0,0){A};
+\node[above] at (1.5,0.5){B};
+\node[below] at (1.5,-0.5){C};
+\node[right] at (3,0){D};
+
+\draw (0,0) arc (-161.57:-151.57:1.58);
+\draw (0,0) arc (-161.57:-171.57:1.58);
+\draw (0,0) arc (161.57:151.57:1.58);
+\draw (0,0) arc (161.57:171.57:1.58);
+
+\draw (3,0) arc (-161.57+180:-151.57+180:1.58);
+\draw (3,0) arc (-161.57+180:-171.57+180:1.58);
+\draw (3,0) arc (161.57+180:151.57+180:1.58);
+\draw (3,0) arc (161.57+180:171.57+180:1.58);
+
+\coordinate (D') at (3.06,0.27);
+\coordinate (B) at (1.5,0.5);
+\begin{scope}[scale=0.3]
+\Compas {B}{D'} 
+\end{scope}
+\end{tikzpicture}

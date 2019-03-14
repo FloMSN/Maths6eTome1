@@ -1,10 +1,9 @@
-\begin{activite}[Segments, droites et demi-droites]
+\begin{activite}[Découvrir les outils de GeoGebra]
 
-\section{Découvrir les outils de GeoGebra}
 	\subsection{les principaux outils}
 Commencer par lancer le logiciel GeoGebra. Faire afficher une page blanche à l'aide du menu "affichage", en déselectionnant les axes et/ou grille si besoin.
 
-En parcourant les différents outils de construction disponibles dans la barre d'outils, reliez proprement cahque outil avec l'icône qui lui correspond.
+En parcourant les différents outils de construction disponibles dans la barre d'outils, reliez proprement chaque outil avec l'icône qui lui correspond.
 
 \begin{center}
  \begin{tabularx}{\linewidth}{|r|lXrc}
@@ -37,13 +36,28 @@ En utilisant les commandes de l'exercice précédent, réalise la figure corresp
 \item Fais vérifier ton travail par le professeur.
 \end{enumerate}
 
-	\subsection{Reproduction d'une figure}
+	\subsection{Reproduire une figure}
 \begin{enumerate}
 \item Réaliser la figure ci-contre (B est à l'intersection des deux cercles)
 \item Déplacer le point B. S'il reste sur les deux cercles alors la figures est juste.
 \item Fais vérifier ton travail par le professeur.
 \end{enumerate}
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
 
+\draw (0,0) circle (3);
+\draw (-1.5,0) circle (1.5);
+\node at (0,0) {$\times$};
+\node[right] at (0,0) {A};
+\node at (-1.5,0) {$\times$};
+\node[below] at (-1.5,0) {C};
+\node at (-3,0) {$\times$};
+\node[left] at (-3,0) {B};
+\draw (-3,0) -- (0,0);
+\node at (1.5,-1) {BA=3};
+\end{tikzpicture}
+
+\end{center}
 \end{activite}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -68,10 +82,10 @@ Quand le code est compris, tracer la figure de la case \circled{3} et écrire la
      Tracer $(AB)$ 	&  Tracer $[AC)$ 	& 	& Tracer $(AB)$	& 	 		\\ 
      Tracer $[AC]$ 	& Tracer $[BC]$ 	& 	& Tracer$[BC]$		& 			\\
      				&				&	& Tracer$[AC)$		&			\\ \cline{1-2}\cline{4-5}
-   \includegraphics[width=.2\linewidth]{tracerAB-AC} & 
-   \includegraphics[width=.2\linewidth]{tracerAC-BC} & & 
-   \includegraphics[width=.2\linewidth]{tracerAB-BC-AC}& 
-   \includegraphics[width=.2\linewidth]{tracer} 					\\ \cline{1-2}\cline{4-5}
+   \input{./PointsSegmentsDroites/figures/TracerAB_AC} & 
+   \input{./PointsSegmentsDroites/figures/TracerAB_BC} & & 
+   \input{./PointsSegmentsDroites/figures/TracerA_B_C}& 
+   \input{./PointsSegmentsDroites/figures/TracerAB_BC_AC} 					\\ \cline{1-2}\cline{4-5}
   \end{tabular}\\[1em]
 
   
@@ -88,13 +102,13 @@ Quand le code est compris, tracer la figure de la case \circled{3} et écrire la
     d'extrémités $E$ et $G$ ;		&	$R$ et $T$ ;					&					\\
     - Tracer la demi-droite 			&	- Tracer la demi-droite 			&					\\
     d'origine $G$ et passant par $F$.	&	d'origine $S$ et passant par $T$.	&					\\ \hline
-    \includegraphics[width=.24\linewidth]{tracerEFG} 			&  
-    \includegraphics[width=.24\linewidth]{tracerRST}			&
-    \includegraphics[width=.24\linewidth]{tracerLCI}			\\ \hline
+    \input{./PointsSegmentsDroites/figures/TracerFGE} 			&  
+    \input{./PointsSegmentsDroites/figures/TracerRST}			&
+    \input{./PointsSegmentsDroites/figures/TracerLCI}			\\ \hline
     \end{tabular}\\[1em]
 
     
-  \newpage
+  %\newpage
   
    \item Compléter le tableau suivant :
    
@@ -104,16 +118,16 @@ Quand le code est compris, tracer la figure de la case \circled{3} et écrire la
    \begin{ttableau}{\linewidth}{3}
     \hline
     \multicolumn{1}{|c|}{\textbf{Phrase}}	&	\multicolumn{1}{c}{\textbf{Phrase codée}}	&	\multicolumn{1}{|c|}{\textbf{Dessin}}			 	\\  \hline
-    								&	Tracer $[UV]$							&	\includegraphics[width=2.6cm]{phraseUV}		\\  \hline
-    								&										&	\includegraphics[width=3.2cm]{phraseAM}		\\  \hline
-   Tracer la droite passant par $S$ et $T$	&										&	\includegraphics[width=2.6cm]{phraseST}		\\  \hline
-   								&										&	\includegraphics[width=4.0cm]{phraseAM_2}	\\  \hline
-   Tracer le segment d'extrémités $M$ et $N$	&									&	\includegraphics[width=2.6cm]{phraseMN} 	\\  \hline
-   								&	Tracer $[KJ)$							&	\includegraphics[width=2.6cm]{phraseKJ}		\\  \hline
-								&										&	\includegraphics[width=2.6cm]{phraseAM_3}	\\  \hline
-   Tracer la demi-droite d'origine $O$ et 	&										&	\includegraphics[width=2.6cm]{phraseOU}		\\
-   passant par $U$					&										&										\\  \hline
-   								&	Tracer $(BC)$							&	\includegraphics[width=2.6cm]{phraseBC}		\\  \hline
+    								&	Tracer $[UV]$							&	\input{./PointsSegmentsDroites/figures/TracerUV}		\\  \hline
+    								&										&	\input{./PointsSegmentsDroites/figures/TracerAM_1}		\\  \hline
+   Tracer la droite passant par $S$ et $T$	&										&	\input{./PointsSegmentsDroites/figures/TracerST}		\\  \hline
+   								&										&	\input{./PointsSegmentsDroites/figures/TracerAM_2}	\\  \hline
+   Tracer le segment d'extrémités $M$ et $N$	&									&	\input{./PointsSegmentsDroites/figures/TracerMN} 	\\  \hline
+   								&	Tracer $[KJ)$							&	\input{./PointsSegmentsDroites/figures/TracerKJ}		\\  \hline
+								&										&	\input{./PointsSegmentsDroites/figures/TracerAM_3}	\\  \hline
+   Tracer la demi-droite d'origine $U$ et 	&										&	\input{./PointsSegmentsDroites/figures/TracerOU}		\\
+   passant par $O$					&										&										\\  \hline
+   								&	Tracer $(BC)$							&	\input{./PointsSegmentsDroites/figures/TracerBC}		\\  \hline
   \end{ttableau}
   
    \end{enumerate} 

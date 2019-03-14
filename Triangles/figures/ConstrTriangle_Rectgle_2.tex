@@ -1,0 +1,77 @@
+
+\begin{tikzpicture}[scale=0.28,rotate=-15,every node/.style={scale=1}]
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Définition des paramètres de l'équerre
+%et de son positionnement
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def \xorigine {0}; %abscisse de l'origine de l'équerre posée avec un xshift
+\def \yorigine {0}; %ordonnée de l'origine de l'équerre posée avec un yshift
+\def \rotation {0}; %angle de rotation de l'équerre
+\def \longueur {4}; %longueur de l'équerre
+\def \largeur {2}; %largeur de l'équerre
+\def \epaisseur {\longueur * 0.1}; %épaisseur de la partie «colorée» de l'équerre
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Tracé de l'équerre
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{scope}[scale=2,xshift=\xorigine cm,yshift=\yorigine cm,rotate=\rotation]
+
+%contour extérieur de l'équerre
+\coordinate (A) at (0,0) ; %«origine» de l'équerre
+\coordinate (B) at (\largeur,0) ;
+\coordinate (C) at (0,\longueur) ;
+\draw [gray](A)--(B)--(C)--cycle;
+
+
+%contour intérieur de l'équerre
+\coordinate (D) at (\epaisseur,\epaisseur) ;
+\coordinate (E) at ($\largeur*(1,0)-{\largeur * \epaisseur / \longueur}*(1,0)-\epaisseur*(1,0)+\epaisseur*(0,1)$);
+\coordinate (F) at ($\epaisseur*(1,0)+\longueur*(0,1)-{2*\longueur * \epaisseur / \largeur}*(0,1)$);
+\draw [gray](D)--(E)--(F)--cycle;
+
+%partie colorée de l'équerre
+\fill [color=blue!50!gray,opacity=.4,even odd rule] (A)--(B)--(C)--cycle (D)--(E)--(F)--cycle;%l'option even odd rule permet de faire le remplissage entre les 2 zones définies
+
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Fin de l'équerre
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Début crayon
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{scope}[scale=1,xshift=0cm,yshift=6cm,rotate=50] %le crayon, xshift et yshift pour les coordonnées de la pointe, rotate pour l'orientation du crayon
+\def \couleur {black}
+\coordinate (O) at (0,0);
+\fill[\couleur!40] (-0.2,4.8) -- (0.2,4.8) -- (0.2,0.8) --(0.1,0.65) -- (0,0.8) -- (-0.1,0.66) -- (-0.2,0.8) -- cycle; %corps du crayon
+\draw[color=white] (0,4.8) -- (0,0.8); %trait intérieur du crayon
+\fill[\couleur!90] (-0.2,4.3) -- (0,4.27) -- (0.2,4.3) -- (0.2,4.8) arc(30:150:0.23cm); %partie haute du crayon
+\fill[brown!40] (-0.2,0.8) -- (O)node[coordinate,pos=0.75](a){} -- (0.2,0.8)node[coordinate,pos=0.25](b){} -- (0.1,0.65) -- (0,0.8) -- (-0.1,0.66) -- cycle; %pointe du crayon (partie taillée)
+\fill[\couleur!90] (a) -- (O) -- (b) -- cycle; %mine du crayon
+\end{scope}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Fin crayon
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\draw[thick] (0,6)--(0,0) node [above left]{K}--(5,0) node[above right]{I}--+(90:0.3)--+(-90:0.3);
+
+\end{tikzpicture} 

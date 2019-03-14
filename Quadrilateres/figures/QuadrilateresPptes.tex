@@ -1,0 +1,46 @@
+\begin{tikzpicture}
+% définition des styles
+\def\couleur{H4!50}
+\def\echellequadri{1.2}
+\def\echelleppte{0.8}
+\tikzstyle{quadri}=[draw,color=H1,fill=\couleur,text=H1,scale=\echellequadri]
+\tikzstyle{txtpptecote}=[text=A1,scale=\echelleppte,fill=white,text width=2cm,text badly centered]
+\tikzstyle{txtpptediag}=[text=B2,scale=\echelleppte,fill=white,text width=2cm,text badly centered]
+\tikzstyle{lignepptecote}=[->,>=latex,very thick,dotted,color=A1]
+\tikzstyle{lignepptediag}=[->,>=latex,very thick,dotted,color=B2]
+
+
+%%%%% les nœuds %%%%%
+%%%Parallélogramme
+\node[scale=\echellequadri] (P) at (0,4) {Parallélogramme};
+\coordinate[shift={(-2mm,0mm)}] (P1) at (P.north west);
+\coordinate[shift={(-2mm,0mm)}] (P2) at (P.north east);
+\coordinate[shift={(2mm,0mm)}] (P3) at (P.south east);
+\coordinate[shift={(2mm,0mm)}] (P4) at (P.south west);
+\draw[color=H1,fill=\couleur] (P1)--(P2)--(P3)--(P4)--cycle;
+\node[color=H1,scale=\echellequadri] (P) at (0,4) {Parallélogramme};
+%%%Rectangle
+\node[rectangle,quadri] (R) at (-3.2,0) {Rectangle};
+%%%Losange
+\node[shape=diamond,shape aspect=2,quadri] (L) at (4.2,0) {Losange};
+%%%Carré
+\node[quadri,minimum size=1.2cm] (C) at (0,-4) {Carré};
+
+%%%%% les flèches avec le texte %%%%%
+\draw[lignepptecote] (P) .. controls +(175:4cm) and +(160:4cm)..(R) node[txtpptecote,pos=0.7]{avec 2 côtés consécutifs perpendiculaires};
+
+\draw[lignepptediag] (P) .. controls +(180:4cm) and +(90:0.6cm)..(R)node[txtpptediag,pos=0.6]{avec diagonales de même longueur};
+
+\draw[lignepptecote] (P) .. controls +(10:4cm) and +(50:4cm)..(L)node[txtpptecote,pos=0.8]{avec 2 côtés consécutifs égaux};
+
+\draw[lignepptediag] (P) .. controls +(0:3cm) and +(100:3cm)..(L)node[txtpptediag,pos=0.6]{avec diagonales perpendiculaires};
+
+\draw[lignepptecote] (R) .. controls +(-130:4cm) and +(-160:4cm)..(C)node[txtpptecote,pos=0.4]{avec 2 côtés consécutifs égaux};
+
+\draw[lignepptediag] (R) .. controls +(-70:3cm) and +(160:2cm)..(C)node[txtpptediag,pos=0.4]{avec diagonales perpendiculaires};
+
+\draw[lignepptecote] (L) .. controls +(-50:3cm) and +(-20:3cm)..(C)node[txtpptecote,pos=0.4]{avec 2 côtés consécutifs perpendiculaires};
+
+\draw[lignepptediag] (L) .. controls +(-110:3cm) and +(20:2cm)..(C)node[txtpptediag,pos=0.5]{avec diagonales de même longueur};
+
+\end{tikzpicture}

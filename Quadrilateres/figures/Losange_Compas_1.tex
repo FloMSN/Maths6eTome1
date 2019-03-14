@@ -1,0 +1,20 @@
+\begin{tikzpicture}[scale=1.2,every node/.style={scale=0.8}]
+
+\draw [thick](0,0) -- (1.5,0.5) node[midway,above,sloped]{6 cm};
+\draw [thick] (1.5,0.5) -- (1.5,-.5);
+\draw [thick](1.5,-0.5) -- (0,0) node[midway,below,sloped]{6 cm};
+\node[left] at (0,0){A};
+\node[above] at (1.5,0.5){B};
+\node[below] at (1.5,-0.5){C};
+
+\draw (0,0) arc (-161.57:-151.57:1.58);
+\draw (0,0) arc (-161.57:-171.57:1.58);
+\draw (0,0) arc (161.57:151.57:1.58);
+\draw (0,0) arc (161.57:171.57:1.58);
+
+\coordinate (A') at (0.11,-0.25);
+\coordinate (B) at (1.5,0.5);
+\begin{scope}[scale=0.3]
+\Compas {B}{A'} 
+\end{scope}
+\end{tikzpicture}

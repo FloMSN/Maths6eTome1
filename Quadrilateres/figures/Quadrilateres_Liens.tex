@@ -1,0 +1,50 @@
+\begin{tikzpicture}[every node/.style={scale=0.7}]
+% définition des styles
+\def\couleur{yellow!50}
+\tikzstyle{quadri}=[draw,fill=\couleur,text=blue]
+\tikzstyle{estun}=[->,>=latex,very thick,dotted]
+
+%%%%% les nœuds %%%%%
+%%%Quadrilatère
+\node (Q) at (0,2) {Quadrilatère};
+\coordinate[shift={(0mm,1mm)}] (Q1) at (Q.north west);
+\coordinate[shift={(2mm,-1mm)}] (Q2) at (Q.north east);
+\coordinate[shift={(-3mm,1mm)}] (Q3) at (Q.south east);
+\coordinate[shift={(2mm,-2mm)}] (Q4) at (Q.south west);
+\draw[fill=\couleur] (Q1)--(Q2)--(Q3)--(Q4)--cycle;
+\node[blue] (Q) at (0,2) {Quadrilatère};
+%%%Parallélogramme
+\node[rectangle] (P) at (0,1) {Parallélogramme};
+\coordinate[shift={(-3mm,0mm)}] (P1) at (P.north west);
+\coordinate[shift={(-3mm,0mm)}] (P2) at (P.north east);
+\coordinate[shift={(3mm,0mm)}] (P3) at (P.south east);
+\coordinate[shift={(3mm,0mm)}] (P4) at (P.south west);
+\draw[fill=\couleur] (P1)--(P2)--(P3)--(P4)--cycle;
+\node[color=blue] (P) at (0,1) {Parallélogramme};
+%%%Rectangle
+\node[rectangle,quadri] (R) at (-1,0) {Rectangle};
+%%%Losange
+\node[shape=diamond,shape aspect=2,quadri] (L) at (1.5,0) {Losange};
+%%%Carré
+\node[quadri,minimum size=1.2cm] (C) at (0,-1) {Carré};
+%%%Trapèze
+\node (T) at (2,2) {Trapèze};
+\coordinate[shift={(0mm,0mm)}] (T1) at (T.north west);
+\coordinate[shift={(0mm,0mm)}] (T2) at (T.north east);
+\coordinate[shift={(4mm,0mm)}] (T3) at (T.south east);
+\coordinate[shift={(-2mm,0mm)}] (T4) at (T.south west);
+\draw[fill=\couleur] (T1)--(T2)--(T3)--(T4)--cycle;
+\node[blue] (T) at (2,2) {Trapèze};
+
+%%%%% les flèches %%%%%
+\draw[estun] (P)--(Q);
+\draw[estun] (R.north)--(P);
+\draw[estun] (L.north west)--(P);
+\draw[estun] (C)--(R.south);
+\draw[estun] (C)--(L.south west);
+\coordinate[shift={(-1mm,0mm)}] (TFl) at (T.west);
+\draw[estun] (TFl)--(Q);
+
+%%%%%% la légende %%%%%
+\draw[estun] (1,-1.2)--(2.3,-1.2)node[midway,above]{est un};
+\end{tikzpicture}

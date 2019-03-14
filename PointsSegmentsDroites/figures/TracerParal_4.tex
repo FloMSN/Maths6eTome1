@@ -1,0 +1,116 @@
+%manuel 6e, chapitre G3
+\begin{tikzpicture}[scale=.5,every node/.style={scale=1},rotate=30]
+
+\draw (0,2) node [above left]{M};
+\draw (0,2) node {$\times$};
+\draw (-2.2,0)--(2.6,0) node [near end,below] {$(d)$};
+\draw [red](-1,2)--(0.5,2);
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Définition des paramètres de l'équerre
+%et de son positionnement
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def \xorigine {-1.65}; %abscisse de l'origine de l'équerre posée avec un xshift
+\def \yorigine {0}; %ordonnée de l'origine de l'équerre posée avec un yshift
+\def \rotation {-90}; %angle de rotation de l'équerre
+\def \longueur {4}; %longueur de l'équerre
+\def \largeur {2}; %largeur de l'équerre
+\def \epaisseur {\longueur * 0.1}; %épaisseur de la partie «colorée» de l'équerre
+\def \yorigine2 {3.31}; %ordonnée de l'origine de l'équerre posée avec un yshift
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Tracé de l'équerre
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{scope}[scale=.6,xshift=\xorigine cm,yshift=\yorigine2 cm,rotate=\rotation]
+
+%contour extérieur de l'équerre
+\coordinate (A) at (0,0) ; %«origine» de l'équerre
+\coordinate (B) at (\largeur,0) ;
+\coordinate (C) at (0,\longueur) ;
+\draw [gray](A)--(B)--(C)--cycle;
+
+
+%contour intérieur de l'équerre
+\coordinate (D) at (\epaisseur,\epaisseur) ;
+\coordinate (E) at ($\largeur*(1,0)-{\largeur * \epaisseur / \longueur}*(1,0)-\epaisseur*(1,0)+\epaisseur*(0,1)$);
+\coordinate (F) at ($\epaisseur*(1,0)+\longueur*(0,1)-{2*\longueur * \epaisseur / \largeur}*(0,1)$);
+\draw [gray](D)--(E)--(F)--cycle;
+
+%partie colorée de l'équerre
+\fill [color=blue!50!gray,opacity=.4,even odd rule] (A)--(B)--(C)--cycle (D)--(E)--(F)--cycle;%l'option even odd rule permet de faire le remplissage entre les 2 zones définies
+
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Fin de l'équerre
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Début règle !! Si la figure est tournée, il faut
+%rajouter l'angle de rotation dans le node des graduation
+%pour que les nombres soient écrits correctement
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% 
+
+    %Graduaton max. de la règle
+    \def \Taille {5}
+    %Définition de l 'angle de rotation de la règle
+    \def \Rotation {-90}
+    %Définition du décalage de la règle
+    \def \DecalX {-1.5}
+    \def \DecalY {2.8}
+    %Couleur des élèments de la règle (sauf le remplissage)
+    \def \RegleColor {blue!60}
+
+\begin{scope}[shift={(\DecalX,\DecalY)},rotate=\Rotation,scale=1]
+    % contours de la règle
+    \draw[color=\RegleColor, fill =blue!5, opacity=0.5] (-0.2,0.5) rectangle (\Taille+0.2,-0.5);	%Dont couleur de remplissage
+    % graduation 1 mm
+    \foreach \a in {0,0.1,...,\Taille}{\draw[color=\RegleColor] (\a,0.5)--(\a,0.42);}
+    % graduation 5 mm
+    \foreach \a in {0,0.5,...,\Taille}{\draw[color=\RegleColor] (\a,0.42)--(\a,0.35);}
+    % graduation et repères 10 mm
+    \foreach \a in {0,1,...,\Taille}{\draw[color=\RegleColor] (\a,0.35)--(\a,0.25)
+    node[font=\tiny, rotate=\Rotation+30] (\a) at (\a,0.1){\a};}%ici rajouter l'angle de rotation de la figure complète pour que les nombres soient écrits correctement
+\end{scope}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Fin de la règle
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Début crayon
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{scope}[scale=0.3,xshift=1.65cm,yshift=6.65cm,rotate=-70] %le crayon, xshift et yshift pour les coordonnées de la pointe, rotate pour l'orientation du crayon
+\def \couleur {black}
+\coordinate (O) at (0,0);
+\fill[\couleur!40] (-0.2,4.8) -- (0.2,4.8) -- (0.2,0.8) --(0.1,0.65) -- (0,0.8) -- (-0.1,0.66) -- (-0.2,0.8) -- cycle; %corps du crayon
+\draw[color=white] (0,4.8) -- (0,0.8); %trait intérieur du crayon
+\fill[red] (-0.2,4.3) -- (0,4.27) -- (0.2,4.3) -- (0.2,4.8) arc(30:150:0.23cm); %partie haute du crayon
+\fill[brown!40] (-0.2,0.8) -- (O)node[coordinate,pos=0.75](a){} -- (0.2,0.8)node[coordinate,pos=0.25](b){} -- (0.1,0.65) -- (0,0.8) -- (-0.1,0.66) -- cycle; %pointe du crayon (partie taillée)
+\fill[red] (a) -- (O) -- (b) -- cycle; %mine du crayon
+\end{scope}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Fin crayon
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{tikzpicture} 

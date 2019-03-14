@@ -1,20 +1,58 @@
+\prof
+Dans ce cours, on prendra soin de faire le lien avec les ensembles de nombres. Faire un rappel grâce que schéma donné au début de cet ouvrage.
+
 \section{Les nombres relatifs}
 
 % remarque : pour qu'un mot se retrouve dans le lexique : \MotDefinition{asymptote horizontale}{} 
 
 \vspace{4em}
 
+\begin{center}
+    \input{NbsRelatifs/figures/Ascenseur.tex}
+\end{center}
+
 \begin{definition}
-Un \MotDefinition{nombre relatif positif}{} s'écrit avec le signe $+$ ou sans signe.
+Lorsqu'on effectue un déplacement, deux données sont importantes:
+\begin{itemize}
+    \item le sens du déplacement
+    \item la longueur du déplacement
+\end{itemize}
 
-Un \MotDefinition{nombre relatif négatif}{} s'écrit avec le signe $-$. 
-
-0 est le seul nombre à la fois positif et négatif.
-
-Deux nombres relatifs qui ne diffèrent \textbf{que} par leur signe sont \textbf{opposés}.
+En mathématiques, ce déplacement est caractérisé par \textcolor{C2}{\textbf{un nombre relatif}}.\\
 \end{definition}
 
-\vspace{4em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{definition}
+On commence toujours à compter à partir de 0.\\
+Lorsque que le nombre est \textbf{inférieur à 0} (à gauche ou en dessous de 0), on parle de \textcolor{C2}{\textbf{nombre négatif}} et on utilise un signe $-$ placé devant le chiffre.\\
+Lorsque que le nombre est \textbf{supérieur à 0} (à droite ou en dessus de 0), on parle de \textcolor{C2}{\textbf{nombre positif}} et on peut alors utiliser un signe $+$ placé devant le chiffre mais ce n'est pas toujours obligatoire.\\
+0 est le seul nombre à la fois positif et négatif.\\
+\end{definition}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{definition}
+La valeur du déplacement est donnée par le chiffre placé après le signe. C'est ce qu'on appelle \textcolor{C2}{\textbf{ la valeur absolue}}.
+Il s'agit de la distance entre 0 est le nombre relatif. Il existe une notation pour parler de la valeur absolue:|nombre|\\
+Deux nombres relatifs qui ne diffèrent \textbf{que} par leur signe sont \textcolor{C2}{\textbf{opposés}}.
+\end{definition}
+
+\begin{methode*1}[Trouver la valeur absolue d'un nombre relatif]
+
+
+\begin{exemple*1}
+Donne la valeur absolue du nombre $-2$ :
+
+$|-2|$ = 2.
+\end{exemple*1}
+
+
+\exercice
+Donne la valeur absolue des nombres suivants : $+5$ ; $-7$ ; $+64,78$ et $-123,4$.
+%\correction
+
+\end{methode*1}
 
 
 \begin{methode*1}[Savoir utiliser le vocabulaire]
@@ -40,13 +78,15 @@ $-2,531$ ; $0$ ; $1,245$ ;  $-0,03$ et $0,003$.
 
 \end{methode*1}
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 
 
 \begin{aconnaitre}
-Tout point d'une droite graduée est repéré par un nombre relatif appelé son \MotDefinition{abscisse}{}.
+Tout point d'une droite graduée est repéré par un nombre relatif appelé son \textcolor{C2}{\textbf{abscisse}}.
 
 \begin{tikzpicture}
 \draw[->] (-6,0) -- (6,0);
@@ -132,90 +172,7 @@ Trace une droite graduée d'origine $O$, une unité valant 2 cm. Places-y les p
 
 \end{methode*1}
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-\begin{definition}
-La \MotDefinition{valeur absolue}{} d'un nombre relatif est le nombre sans son signe.
-
-Sur une droite graduée, cela correspond à la distance entre l'origine et le point qui a pour abscisse ce nombre.
-\end{definition}
-
-\vspace{4em}
-
-\begin{methode*1}[Trouver la valeur absolue d'un nombre relatif]
-
-
-\begin{exemple*1}
-Donne la valeur absolue du nombre $-2$ :
-
-La valeur absolue du nombre $-2$ est 2.
-\end{exemple*1}
-
-
-\exercice
-Donne la valeur absolue des nombres suivants : $+5$ ; $-7$ ; $+64,78$ et $-123,4$.
-%\correction
-
-\end{methode*1}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-
-
-\section{Repérage dans un plan}
-
-\vspace{3em}
-
-\begin{definition}
-Dans un plan muni d'un repère, tout point est repéré par un couple de nombres relatifs appelé ses \MotDefinition{coordonnées}{} : la première est l'\textbf{abscisse} et la seconde est l'\MotDefinition{ordonnée}{}.
-\end{definition}
-
-\vspace{3em}
-
-\begin{methode*1}[Repérer un point dans un plan]
-
-\begin{exemple*1}
-Lis les coordonnées du point $A$ et du point $B$ puis place les points $C(5 ; -3)$ et $D(-4 ; 0)$ :
-
-\begin{center} \includegraphics[width=4.7cm]{grapheAOB} \end{center}
-
-Pour lire les coordonnées du point $A$, on repère l'abscisse de $A$ sur l'axe horizontal (pointillés verts) puis  son ordonnée sur l'axe vertical (pointillés violets). On conclut en donnant l'abscisse puis l'ordonnée : $A (-4 ; +2)$. \\[0.5em]
-Le point $B$ appartient à l'axe des ordonnées donc son abscisse est 0. Ses coordonnées sont $(0 ; -3)$.
-
-Pour placer le point $C$, on repère tous les points d'abscisse $+5$ puis on repère tous les points d'ordonnée $-3$. On place le point $C$ à l'intersection des deux lignes. \\[0.5em]
-L'ordonnée du point $D$ est 0 donc $D$ appartient à l'axe des abscisses.
-\end{exemple*1}
-
-\exercice 
-
-\begin{minipage}[c]{0.45\linewidth}
-Sur la figure ci-contre, lis les coordonnées des points $K$, $L$, $M$, $N$, $P$ et $R$ :
- \end{minipage} \hfill%
- \begin{minipage}[c]{0.4\linewidth}
- 
- \begin{center} \includegraphics[width=3.8cm]{grapheKRM} \end{center}
-  \end{minipage} \\
-%\correction
-
-\exercice Trace sur ton cahier un repère d'origine $O$. L'unité de longueur est le centimètre sur les deux axes. Place les points suivants :
-\begin{colenumerate}{4}
- \item $E(+2 ; +3)$ ;
- \item $F(-2 ; -3)$ ;
- \item $G(+2 ; -3)$ ;
- \item $H(-2 ; 3)$.
- \end{colenumerate}
-%\correction
-
-\end{methode*1}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Comparaison}
 
@@ -301,4 +258,91 @@ Range dans l'ordre croissant les nombres suivants :
 %\correction
 
 \end{methode*1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+\section{Repérage dans un plan}
+
+\vspace{3em}
+
+\begin{definition}
+Dans un plan muni d'un repère, tout point est repéré par un couple de nombres relatifs appelé ses \MotDefinition{coordonnées}{} : la première est l'\textcolor{C2}{\textbf{abscisse}} (déplacement horizontal) et la seconde est l'\textcolor{C2}{\textbf{ordonnée}} (déplacement vertical).\\
+Pour un point A, on écrira toujours \textbf{A(abscisse de A ; ordonnée de A)}.
+\end{definition}
+
+\vspace{3em}
+
+\begin{methode*1}[Repérer un point dans un plan]
+
+\begin{exemple*1}
+Lis les coordonnées du point $A$ et du point $B$ puis place les points $C(5 ; -3)$ et $D(-3 ; 0)$ :
+
+\begin{center} 
+\begin{tikzpicture}[general,scale=0.5]
+\draw[xstep=1,ystep=1,color=gray!80] (-6,-4) grid (6,4);
+\axeX{-6}{6}{1}
+\axeY{-4}{4}{1}
+
+\draw[ultra thick,loosely dotted,color=C1](-4,2)--(0,2);
+\node[right,color=C1,font=\bfseries] at (0,2){$+2$};
+\draw[ultra thick,loosely dotted,color=G1](-4,2)--(-4,0);
+\node[below,color=G1,font=\bfseries] at (-4,0){$-4$};
+
+\node at (0,-3){$\bullet$};
+\node[above left,font=\bfseries] at (-4,2){A};
+\node at (-4,2){$\bullet$};
+\node[right,font=\bfseries] at (0,-3){B};
+\end{tikzpicture}
+\end{center}
+
+Pour lire les coordonnées du point $A$, on repère l'abscisse de $A$ sur l'axe horizontal (pointillés bleus) puis  son ordonnée sur l'axe vertical (pointillés violets). On conclut en donnant l'abscisse puis l'ordonnée : $A (-4 ; +2)$. \\[0.5em]
+Le point $B$ appartient à l'axe des ordonnées donc son abscisse est 0. Ses coordonnées sont $(0 ; -3)$.
+
+Pour placer le point $C$, on repère tous les points d'abscisse $+5$ puis on repère tous les points d'ordonnée $-3$. On place le point $C$ à l'intersection des deux lignes. \\[0.5em]
+L'ordonnée du point $D$ est 0 donc $D$ appartient à l'axe des abscisses.
+\end{exemple*1}
+
+\exercice 
+
+\begin{minipage}[c]{0.45\linewidth}
+Sur la figure ci-contre, lis les coordonnées des points $K$, $L$, $M$, $N$, $P$ et $R$ :
+ \end{minipage} \hfill%
+ \begin{minipage}[c]{0.4\linewidth}
+ \begin{center} 
+\begin{tikzpicture}[general,scale=0.5]
+\draw[xstep=1,ystep=1,color=gray!80] (-6,-4) grid (6,3);
+\axeX{-6}{6}{1}
+\axeY{-4}{3}{1}
+
+\node at (-3,2){$\bullet$};
+\node[left,font=\bfseries] at (-3,2){K};
+\node at (-5,0){$\bullet$};
+\node[below,font=\bfseries] at (-5,0){L};
+\node at (2,-3){$\bullet$};
+\node[left,font=\bfseries] at (2,-3){M};
+\node at (0,1){$\bullet$};
+\node[right,font=\bfseries] at (0,1){N};
+\node at (4,-1){$\bullet$};
+\node[left,font=\bfseries] at (4,-1){P};
+\node at (-4,-3){$\bullet$};
+\node[left,font=\bfseries] at (-4,-3){R};
+\end{tikzpicture}
+\end{center}
+  \end{minipage} \\
+%\correction
+
+\exercice Trace sur ton cahier un repère d'origine $O$. L'unité de longueur est le centimètre sur les deux axes. Place les points suivants :
+\begin{colenumerate}{4}
+ \item $E(+2 ; +3)$ ;
+ \item $F(-2 ; -3)$ ;
+ \item $G(+2 ; -3)$ ;
+ \item $H(-2 ; 3)$.
+ \end{colenumerate}
+%\correction
+
+\end{methode*1}
+
+
+
 

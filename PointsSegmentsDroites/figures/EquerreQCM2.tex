@@ -1,0 +1,58 @@
+
+
+\begin{tikzpicture}[scale=0.55,rotate=20,every node/.style={scale=1.2}]
+
+
+
+
+\draw [thick](0,0) node[above]{($d$)}--(6,0);
+\draw (4,3) node[left]{A};
+\draw (4,3) node[rotate=20]{$\bullet$};
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Définition des paramètres de l'équerre
+%et de son positionnement
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def \xorigine {4.52}; %abscisse de l'origine de l'équerre posée avec un xshift
+\def \yorigine {0}; %ordonnée de l'origine de l'équerre posée avec un yshift
+\def \rotation {0}; %angle de rotation de l'équerre
+\def \longueur {4}; %longueur de l'équerre
+\def \largeur {2}; %largeur de l'équerre
+\def \epaisseur {\longueur * 0.1}; %épaisseur de la partie «colorée» de l'équerre
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Tracé de l'équerre
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{scope}[scale=1,xshift=\xorigine cm,yshift=\yorigine cm,rotate=\rotation]
+
+%contour extérieur de l'équerre
+\coordinate (A) at (0,0) ; %«origine» de l'équerre
+\coordinate (B) at (-\largeur,0) ;
+\coordinate (C) at (0,\longueur) ;
+\draw [gray](A)--(B)--(C)--cycle;
+
+
+%contour intérieur de l'équerre
+\coordinate (D) at (-\epaisseur,\epaisseur) ;
+\coordinate (E) at ($\largeur*(-1,0)+{\largeur * \epaisseur / \longueur}*(1,0)+\epaisseur*(1,0)+\epaisseur*(0,1)$);
+\coordinate (F) at ($\epaisseur*(-1,0)+\longueur*(0,1)-{2*\longueur * \epaisseur / \largeur}*(0,1)$);
+\draw [gray](D)--(E)--(F)--cycle;
+
+%partie colorée de l'équerre
+\fill [color=blue!70!gray,opacity=.4,even odd rule] (A)--(B)--(C)--cycle (D)--(E)--(F)--cycle;%l'option even odd rule permet de faire le remplissage entre les 2 zones définies
+
+\end{scope}
+
+
+
+
+
+\end{tikzpicture}
+
+

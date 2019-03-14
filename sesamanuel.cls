@@ -134,6 +134,11 @@
 \renewcommand{\ttdefault}{lmtt}
 \RequirePackage{mathrsfs}
 \RequirePackage{pifont}
+\RequirePackage{hyperref} %package permettant d'insérer des liens hypertext ajouté par EJac.
+    \hypersetup{
+     colorlinks,
+     allcolors=.,
+     urlcolor=blue,}
 \RequirePackage[official]{eurosym}
 %%%\newcommand*\scriptfamily{\fontfamily{fco}\selectfont}
 \newcommand*\scriptfamily{\fontfamily{llcmss}\selectfont}

@@ -1,0 +1,16 @@
+\begin{tikzpicture}[every node/.style={scale=0.7}]
+
+\draw [thick](0,0) node{$\times$} -- (1,0) node{$\times$} -- (0.2,1.2)node{$\times$};
+\node[below left] at (0,0){A};
+\node[below right] at (1,0){B};
+\node[above right] at (0.2,1.2){C};
+
+\draw (-0.8,1.2) arc (180:170:1);
+\draw (-0.8,1.2) arc (180:190:1);
+
+\coordinate (C) at (0.2,1.2);
+\coordinate (D) at (-0.8,1.2);
+\begin{scope}[scale=0.2]
+\Compas {C}{D} 
+\end{scope}
+\end{tikzpicture}

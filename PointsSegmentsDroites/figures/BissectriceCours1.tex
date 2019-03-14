@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=0.6,rotate=20,every node/.style={scale=1.2}]
+
+\draw (-0.5,0) node[above left]{0}--(4,0) node[below]{$y$};
+\draw (0,0) --(40:4) node[above left]{$x$};
+\draw (0,0)--+(210:0.5);
+\draw[thick,dashed,blue] (2,0) arc (0:55:2);
+\draw[thick,dashed,blue] (2,0) arc (0:-15:2);
+
+\coordinate (A) at (0,0) ;
+\coordinate (B) at (1.414,1.414) ;
+
+
+\begin{scope}[scale=0.35]
+\Compas{A}{B}
+\end{scope}
+
+
+\end{tikzpicture}
+

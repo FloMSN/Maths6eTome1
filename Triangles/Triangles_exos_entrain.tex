@@ -463,11 +463,14 @@ Trace les hauteurs des triangles suivants.
 
 \vspace{2em}
 \begin{center}
- \includegraphics[width=0.3\textwidth]{Hauteurs_1}
+\begin{tikzpicture}
+\draw [thick](0,0) node [above left]{A}--(2,2.5) node [above]{C}--(4.4,-1) node[right] {B}--cycle;
+\end{tikzpicture}
  
 \vspace{1em}
-
- \includegraphics[width=0.3\textwidth]{Hauteurs_2}
+\begin{tikzpicture}
+\draw [thick](0,0) node [above left]{E}--(2,1) node [above]{D}--(4.4,-1) node [right] {F}--cycle;
+\end{tikzpicture}
 \end{center}
 \vspace{1em}
 \end{exercice}
@@ -478,10 +481,18 @@ Trace le cercle circonscrit des triangles suivants.
 
 \vspace{2em}
 \begin{center}
- \includegraphics[width=0.3\textwidth]{CercleCirconscrit_1}
+\begin{tikzpicture}
+\draw [thick](0,0) node [above left]{B}--(2,2.5) node [above]{A}--(4.4,-1) node[right] {C}--cycle;
+\end{tikzpicture}
 
 \vspace{5em}
- \includegraphics[width=0.3\textwidth]{CercleCirconscrit_2}
+
+\begin{tikzpicture}[rotate=10]
+\coordinate (G) at (0,0);
+\coordinate (L) at (3.5,-2);
+\draw [thick](G) node [above left]{G}--(L) node [below]{L}--([turn]90:3) node[right] {H}--cycle;
+\draw [thick](G)--(L)--([turn]90:0.4)--([turn]90:0.4)--([turn]90:0.4); 
+\end{tikzpicture}
 \end{center}
 \vspace{2em}
 \end{exercice}
@@ -503,10 +514,11 @@ Dans chaque cas, construis le triangle $ABC$ puis son cercle inscrit :
 Trace un triangle dont le cercle inscrit a un rayon de 2,7 cm.
 \end{exercice}
 
-
-%%%%%%%%%%%%%%%%%%%%Mise en page
-\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{exercice}[trouver le centre du cercle]
+Pour cet exercice tu devras utiliser un objet de forme circulaire que tu trouveras autour de toi (pièce de monnaie, bouteille, couvercle ...).\\
+Sur ton cahier, trace le contour de l'objet que tu as choisi.\\
+A l'aide de tes connaissances sur le cercle et sur les droites remarquables, place précisément le centre de ce cercle.
+\end{exercice}
 
 \begin{exercice}[Des triangles, beaucoup de triangles]
 \begin{enumerate}

@@ -1,0 +1,26 @@
+
+\begin{tikzpicture}[scale=0.4,every node/.style={scale=1}]
+\clip (-2,-1) rectangle (7,4);%pour enlever les cercles «non tracés»
+
+\draw[very thick] (0,0) node [above left]{K}--+(90:0.08)--+(-90:0.08)--(0,0)--(6,0) node [above right]{L}--+(90:0.08)--+(-90:0.08);
+
+\path [name path=cercle 1](0,0) circle (4.5cm);
+\path [name path=cercle 2](6,0) circle (5cm);
+
+\draw [name intersections={of=cercle 1 and cercle 2,by={I1,I2}}];
+\draw [very thick](I1) -- (6,0);
+\draw [dashed,very thick] (I1) -- (0,0) node [midway,sloped,above]{4,5 cm};
+   
+\begin{scope}
+\clip (I1) circle (1);
+\draw [thick](6,0) circle (5cm);
+\draw [thick](0,0) circle (4.5cm);
+\end{scope}
+
+\coordinate (K) at (0,0);
+\begin{scope}[scale=0.65]
+\Compas {K}{I1} 
+\end{scope}
+
+   
+\end{tikzpicture} 

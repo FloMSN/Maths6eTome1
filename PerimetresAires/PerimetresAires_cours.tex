@@ -1,9 +1,149 @@
+\section{Les 3 dimensions}
+\begin{aconnaitre}
+Une figure géométrique est représentée en une ou plusieurs dimensions:
+\begin{center}
+    \input{PerimetresAires/figures/Dimensions_Cours.tex}
+\end{center}
+\end{aconnaitre}
+
+
+\section{Périmètre d'une figure}
+\begin{aconnaitre}[Notion de longueur]
+Le mot \MotDefinition{périmètre}{} désigne \textbf{\textcolor{H1}{la longueur}} du contour d'une figure.
+\begin{center}
+   \input{PerimetresAires/figures/Perimetre_Penta.tex}
+\end{center}
+Pour exprimer les longueurs, on utilise habituellement pour unité le \textbf{\textcolor{H1}{mètre}} et ses dérivés:
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|}
+     \hline   km & hm & dam & m & dm & cm & mm \\ \hline
+         & & & & & & \\
+    \hline
+    \end{tabular}
+\end{center}
+\end{aconnaitre}
+
+\begin{methode*1}[Transformer des unités de longueurs]
+
+\begin{exemple*1}
+Transforme $0,5$ km en m.
+
+Les m (mètres) sont l'unité de mesure.
+
+$1$ km = $\numprint{1000}$ m, donc $0,5$ km $= 0,5 \cdot \numprint{1000}$ m = $500$ m
+\end{exemple*1}
+
+\exercice 
+Effectue les conversions d'unités de longueur suivantes :
+\begin{colenumerate}{3}
+ \item $50$ cm en m ;
+ \item $100$ mm en m ;
+ \item $2,3$ hm en m ;
+ \item $0,03$ dm en m ;
+ \item $23$ dam en cm ;
+ \item $4$ cm en hm.
+ \end{colenumerate}
+%\correction
+
+\end{methode*1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section{Aire d'une figure géométrique} 
 
 % remarque : pour qu'un mot se retrouve dans le lexique : \MotDefinition{asymptote horizontale}{} 
 
-\begin{methode*1}[Évaluer une aire]
+\begin{aconnaitre}[Notion de surface]
+L' \MotDefinition{aire}{} désigne la valeur de \textbf{\textcolor{H1}{la surface}} occupée par une figure.\\
+%le carré
+\begin{center}
+\begin{tikzpicture}
+   \begin{scope}[xshift=3cm]
+\draw[fill=blue] (0,0)--(2,0) --(2,2) --(0,2) -- cycle;
+\end{scope}
+\end{tikzpicture}
+\end{center}
 
+\prof{
+Vous trouverez ici deux lien expliquant le développement du cube et permettant d'expliquer la surface du cube...\\
+\href{https://www.geogebra.org/m/arvQstAW}{cube animé}\\
+\href{https://www.geogebra.org/m/mZA5qKG9}{patron de cube}
+}
+Pour exprimer des aires, on utilise habituellement pour unité le \textbf{\textcolor{H1}{mètre carré}} et ses dérivés:
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+     \hline
+     \multicolumn{2}{|c|}{$km^2$} & 
+     \multicolumn{2}{c|}{$hm^2$} &
+     \multicolumn{2}{c|}{$dam^2$} & 
+     \multicolumn{2}{c|}{$m^2$} & 
+     \multicolumn{2}{c|}{$dm^2$}  & 
+     \multicolumn{2}{c|}{$cm^2$}  & 
+     \multicolumn{2}{c|}{$mm^2$}  \\
+     \multicolumn{2}{|c|}{} & 
+     \multicolumn{2}{c|}{ha} &
+     \multicolumn{2}{c|}{a} & 
+     \multicolumn{2}{c|}{} & 
+     \multicolumn{2}{c|}{}  & 
+     \multicolumn{2}{c|}{}  & 
+     \multicolumn{2}{c|}{}  \\ \hline
+         & & & & & & & & & & & & & \\
+    \hline
+    \end{tabular}
+\end{center}
+\end{aconnaitre}
+
+\begin{methode*1}[Pourquoi le tableau des aires comporte des doubles colonnes?]
+\begin{exemple*1}\\
+Prenons un longueur de 1$cm$.
+\begin{tikzpicture} %segment de 1cm
+\draw (0,0)--(1,0) node[scale=0.8,midway,above]{1 cm};
+\draw (0,0)--+(0,0.15)--+(0,-0.15);
+\draw (1,0)--+(0,0.15)--+(0,-0.15);
+\end{tikzpicture}
+
+Formons une surface basée sur sur cette longueur:
+\begin{tikzpicture}%carré de 1cm^2
+\draw (0,0)--(1,0) node[scale=0.8,midway,below]{$1 \text{cm}$} --(1,1) --(0,1) -- cycle;
+\node[scale=0.8,rotate=90] at(-0.2,0.5) {$1 \text{cm}$};
+\node[scale=0.8] at (0.5,0.5) {$1 \text{cm}^2$};
+\end{tikzpicture}
+
+L'aire de cette figure est de 1$cm^2$. \\
+
+Maintenant, prenons une longueur dix fois plus grande c'est à dire 10$cm$ soit 1$dm$.\\
+\begin{tikzpicture} %segment de 10cm
+\draw (0,0)--(10,0) node[scale=0.8,midway,above]{10 cm} node[scale=0.8,midway,below]{1 dm};
+\draw (0,0)--+(0,0.15)--+(0,-0.15);
+\draw (10,0)--+(0,0.15)--+(0,-0.15);
+\end{tikzpicture}
+
+Formons une surface basée sur cette longueur:\\
+\begin{tikzpicture}%carré de 100cm^2
+\draw (0,0)--(10,0) node[scale=0.8,midway,below]{$10 \text{cm}$} --(10,10) --(0,10) -- cycle;
+\node[scale=0.8,rotate=90] at(-0.2,5) {$10 \text{cm}$};
+\node[scale=0.8] at (5,5) {$100 \text{cm}^2=1\text{dm}^2$};
+\end{tikzpicture}
+
+L'aire est alors de 100$cm^2$.\\
+Que remarque-t-on?\\
+Lorsqu'une longueur est multipliée par 10, l'aire qui lui est relative est multipliée par 100.\\
+La double colonne dans le tableau des aires permet de retranscrire ce phénomène.
+\end{exemple*1}
+\exercice
+Effectue les conversions d'unités d'aire suivantes:
+\begin{colenumerate}{3}
+ \item $7$ dm\up{2} en m\up{2} ;
+ \item $200$ cm\up{2} en m\up{2} ;
+ \item $3,2$ ha en m\up{2} ;
+ \item $0,8$ dm\up{2} en m\up{2} ;
+ \item $45$ hm\up{2} en dm\up{2} ;
+ \item $400$ cm\up{2} en a.
+ \end{colenumerate}
+\end{methode*1}
+
+
+
+\begin{methode*1}[Évaluer une aire]
 \begin{exemple*1}
 \begin{minipage}[c]{0.55\textwidth}
  À l'aide du quadrillage, détermine un encadrement de l'aire de la surface jaune, en prenant pour unité un carreau bleu.
@@ -35,96 +175,97 @@ Donc l'aire de la figure jaune est comprise entre 4 et 18 carreaux.
  
 \end{methode*1}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\vspace{2em}
+\prof{
+\begin{activite}[Problème à Dudu: peindre le cabanon]
+\begin{partie}[objectif]
+A ce stade, les élèves ne connaissent pas encore les formules de calcul d'aire. Le but est de leur faire découvrir par nécessité. Pour ce faire, ils peuvent avoir accès à différentes ressources bien que tout soit dans le livre.
+\end{partie}
+\begin{partie}[Mise en place]
+Mettre les élèves par groupe de 4 environ.
+\end{partie}
 
+\begin{partie}[Consigne]
+"on va regarder une vidéo. Tout est indiqué dans le film. Vous allez travailler ensemble pour essayer de répondre à la question qui va vous être posée". Chaque groupe devra rendre son travail qui explique clairement sa démarche sur une feuille A3 (et éventuellement la présenter à la classe!).\\
+\end{partie}
 
-\begin{aconnaitre}[Les longueurs]
-Les \MotDefinition{facteurs de multiplication}{} des \textbf{\textcolor{H1}{m (mètres)}} sont :
-\begin{colitemize}{2}
-\item \textbf{k} (kilo) : $\numprint{1000} = 10^3$ ;
-\item \textbf{h} (hecto) : $100 = 10^2$ ;
-\item \textbf{da} (déca) : $10 = 10^1$ ;
-\item \textbf{d} (déci) : $0,1 = 10^{-1}$ ;
-\item \textbf{c} (centi) : $0,01 = 10^{-2}$ ;
-\item \textbf{m} (milli) : $0,001 = 10^{-3}$.
-\end{colitemize}
+\begin{partie}[La vidéo]
+Voici le lien qui mène vers la vidéo:
+\href{https://www.youtube.com/watch?v=ALUiqD4blG8}{Peindre le cabanon}.
+On peut diffuser la vidéo à plusieurs reprises si nécessaire mais il est important que les élèves finissent par prendre des notes.
+\end{partie}
+
+\begin{partie}[Déroulement]
+Après avoir regardé la vidéo 2 ou 3 fois, les élèves se mettent au travail.\\
+Très vite, ils vont avoir besoin de formules qu'ils ne connaissent pas nécessairement. On peut alors les orienter vers les pages du livre correspondantes ou imaginer un prolongement à l'activité avec une tablette ou des ressources mises à disposition dans la classe.\\
+
+Quand les élèves ont terminé, on peut imaginer une rapide présentation de leur travail à la classe. On peut afficher les travaux ou les noter...\\
+
+Voici le genre de travail attendu....:
+\begin{center}
+\includegraphics[width=14cm]{PerimetresAires/figures/cabanon.eps} 
+\end{center}
+
+\end{partie}
+\end{activite}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Volume d'un solide}
+
+\begin{aconnaitre}[Notion de volume]
+Le mot \MotDefinition{volume}{} désigne l'espace contenu dans une figure en 3 dimensions.\\
+Pour exprimer des volumes, on utilise habituellement pour unité le \textbf{\textcolor{H1}{mètre cube}} et ses dérivés:
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+     \hline
+     \multicolumn{3}{|c|}{$km^3$} & 
+     \multicolumn{3}{c|}{$hm^3$} &
+     \multicolumn{3}{c|}{$dam^3$} & 
+     \multicolumn{3}{c|}{$m^3$} & 
+     \multicolumn{3}{c|}{$dm^3$}  & 
+     \multicolumn{3}{c|}{$cm^3$}  & 
+     \multicolumn{3}{c|}{$mm^3$}  \\    \hline
+         & & & & & & & & & & & & & & & & & & & & \\
+    \hline
+    \end{tabular}
+\end{center}
 \end{aconnaitre}
 
-\vspace{2em}
-
-\begin{methode*1}[Transformer des unités de longueurs]
-
-\begin{exemple*1}
-Transforme $0,5$ km en m.
-
-Les m (mètres) sont l'unité de mesure.
-
-$1$ km = $\numprint{1000}$ m, donc $0,5$ km $= 0,5 \cdot \numprint{1000}$ m = $500$ m
+\begin{methode*1}[Pourquoi le tableau des volumes comporte des triples colonnes?]
+\begin{exemple*1}\\
+On a vu précédemment que lorsque la longueur d'un carré est multipliée par 10, son aire est multipliée par 100.\\
+Il en va de même avec les volumes. Lorsque la longueur d'un cube est multipliée par 10, le volume se trouve multiplié par 1000. C'est pour retranscrire ce phénomène que le tableau des volumes comporte des triples colonnes.
 \end{exemple*1}
-
-\exercice 
-Effectue les conversions d'unités de longueurs suivantes :
+\exercice
+Effectue les conversions d'unités de volume suivantes:
 \begin{colenumerate}{3}
- \item $50$ cm en m ;
- \item $100$ mm en m ;
- \item $2,3$ hm en m ;
- \item $0,03$ dm en m ;
- \item $23$ dam en cm ;
- \item $4$ cm en hm.
+ \item $7,61$ km\up{3} en hm\up{3} ;
+ \item $5,15$ m\up{3} en cm\up{3} ;
+ \item $8,12$ cm\up{3}  en dm\up{3} ;
+ \item $12,1$ m\up{3} en hm\up{3} ;
+ \item $85,3$ hm\up{3} en dam\up{3} ;
+ \item $48,7$ dam\up{3} en m\up{3}.
  \end{colenumerate}
-%\correction
-
 \end{methode*1}
 
-\newpage
 
-\begin{aconnaitre}[Les aires]
-Les \MotDefinition{facteurs de multiplication}{} des \textbf{\textcolor{H1}{m\up{2} (mètres carrés)}} sont :
-\begin{colitemize}{2}
-\item \textbf{k} (kilo) : $\numprint{1000000}$ ;
-\item \textbf{h} (hecto) : $\numprint{10000}$ ;
-\item \textbf{da} (déca) : $100$ ;
-\item \textbf{d} (déci) : $0,01$ ;
-\item \textbf{c} (centi) : $\numprint{0,0001}$ ;
-\item \textbf{m} (milli) : $\numprint{0,000001}$.
-\end{colitemize}
-\end{aconnaitre}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{center}
+    \textsc{\textbf{POUR RÉSUMER...}}\\
+    \input{PerimetresAires/figures/AretesFacesCube.tex}
+\end{center}
 
-\vspace{4em}
-
-\begin{methode*1}[Transformer des unités d'aires]
-
-\begin{exemple*1}
-Transforme $3$ hm\up{2} en m\up{2}.
-
-$1$ hm\up{2} = $\numprint{10000}$ m\up{2}, donc $3$ hm\up{2} $= 3 \cdot \numprint{10000}$ m\up{2} = $\numprint{30000}$ m\up{2}
-\end{exemple*1}
-
-\exercice 
-Effectue les conversions d'unités d'aires suivantes :
-\begin{colenumerate}{3}
- \item $7$ dm\up{2} en m\up{2} ;
- \item $200$ cm\up{2} en m\up{2} ;
- \item $3,2$ hm\up{2} en m\up{2} ;
- \item $0,8$ dm\up{2} en m\up{2} ;
- \item $45$ hm\up{2} en dm\up{2} ;
- \item $400$ cm\up{2} en dam\up{2}.
- \end{colenumerate}
-%\correction
-
- \end{methode*1}
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 
+\vspace{2em}
+\section{Calculer des aires à l'aide d'une formule}
 
-\begin{aconnaitre}
+\begin{aconnaitre}[aire du rectangle et du triangle rectangle]
 \begin{tabularx}{\linewidth}{|c|X|X|}
  \cline{2-3}
 \multicolumn{1}{c|}{} & \begin{center} \textbf{\textcolor{H1}{Rectangle}} \includegraphics[width=2.5cm]{rectangleLI} \end{center} & \begin{center} \textbf{\textcolor{H1}{Triangle rectangle}} \includegraphics[width=2.7cm]{rectangleABCD4} \end{center} \\ \hline
@@ -132,13 +273,7 @@ Formule & L'aire du rectangle peut se calculer avec cette formule : {\large \tex
  \end{tabularx} \\[1em]
 Les longueurs doivent être exprimées dans la même unité.
 \end{aconnaitre}
-
-
-
-\vspace{2em}
-
-\begin{methode*1}[Calculer des aires à l'aide d'une formule]
-
+\begin{methode*1}
 \begin{exemple*1}
 Calcule l'aire de la figure $ABCDE$ ci‑dessous (L'unité de longueur est le centimètre) :
 \begin{center}  \includegraphics[width=4.3cm]{aire4} \end{center}
@@ -167,15 +302,61 @@ $SO = 8,04$ dm et $SN = 0,93$ m. Détermine son aire en donnant le résult
 %\correction
  
 \end{methode*1}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-\section{Aire d'un parallélogramme}
+\vspace{2em}
+
+\begin{aconnaitre}[Aire d'un triangle]
+Pour calculer l’aire d’un triangle, on multiplie la \textbf{\textcolor{H1}{longueur d'un côté}} par la \textbf{\textcolor{C2}{hauteur}} relative à ce côté puis on divise le résultat par 2 :
+
+\begin{tabularx}{\textwidth}{XX}
+{\large $\mathcal{A} = \dfrac{b \cdot h}{2}$} & \includegraphics[width=5cm]{longueur_hauteur} \\
+ \end{tabularx} \\
+ \end{aconnaitre}
+
+\vspace{4em}
+
+\begin{methode*1}[Calculer l’aire d’un triangle]
+
+
+ 
+\begin{exemple*1}
+Calcule l’aire du triangle suivant :
+\begin{minipage}[c]{0.68\textwidth}
+\begin{itemize}
+ \item On mesure la longueur d'un côté ;
+ \item On mesure la hauteur relative à ce côté ;
+ \item On multiplie la longueur du côté repéré par la hauteur relative à ce côté puis on divise le résultat par 2 : \\[0.3em]
+$\mathcal{A} = \dfrac{10 \cdot 3}{2} = \dfrac{30}{2} = 15$. \\[0.3em]
+L'aire du triangle vaut 15 cm\up{2}.
+ \end{itemize}
+ \end{minipage} \hfill%
+ \begin{minipage}[c]{0.2\textwidth}
+ \includegraphics[width=3.5cm]{triangle_croquisZ}
+ \end{minipage} \\
+\end{exemple*1}
+
+
+\exercice 
+Calcule l’aire des triangles suivants :
+\begin{colenumerate}{2}
+ \item
+ 
+ \includegraphics[width=3.1cm]{triangle_croquisY}
+ \item
+ 
+ \includegraphics[width=2.8cm]{triangle_croquisW}
+ \end{colenumerate}
+%\correction
+
+\end{methode*1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
 \vspace{2em}
 
-\begin{aconnaitre}
+\begin{aconnaitre}[Aire d'un parallélogramme]
 Pour calculer l’\MotDefinition{aire d’un parallélogramme}{}, on multiplie la \textbf{\textcolor{H1}{longueur d'un côté}} par la \textbf{\textcolor{C2}{hauteur}} relative à ce côté :
 
 \vspace{1em}
@@ -220,71 +401,15 @@ Détermine l’aire des parallélogrammes $MNOP$ et $ABCD$ ci-dessous :
 %\correction
 
 \end{methode*1}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \newpage
 
-
-\section{Aire d'un triangle}
-
 \vspace{2em}
 
-\begin{aconnaitre}
-Pour calculer l’aire d’un triangle, on multiplie la \textbf{\textcolor{H1}{longueur d'un côté}} par la \textbf{\textcolor{C2}{hauteur}} relative à ce côté puis on divise le résultat par 2 :
-
-\begin{tabularx}{\textwidth}{XX}
-{\large $\mathcal{A} = \dfrac{b \cdot h}{2}$} & \includegraphics[width=5cm]{longueur_hauteur} \\
- \end{tabularx} \\
- \end{aconnaitre}
-
-\vspace{4em}
-
-\begin{methode*1}[Calculer l’aire d’un triangle]
-
-
- 
-\begin{exemple*1}
-Calcule l’aire du triangle suivant :
-\begin{minipage}[c]{0.68\textwidth}
-\begin{itemize}
- \item On mesure la longueur d'un côté ;
- \item On mesure la hauteur relative à ce côté ;
- \item On multiplie la longueur du côté repéré par la hauteur relative à ce côté puis on divise le résultat par 2 : \\[0.3em]
-$\mathcal{A} = \dfrac{10 \cdot 3}{2} = \dfrac{30}{2} = 15$. \\[0.3em]
-L'aire du triangle vaut 15 cm\up{2}.
- \end{itemize}
- \end{minipage} \hfill%
- \begin{minipage}[c]{0.2\textwidth}
- \includegraphics[width=3.5cm]{triangle_croquisZ}
- \end{minipage} \\
-\end{exemple*1}
-
-
-\exercice 
-Calcule l’aire des triangles suivants :
-\begin{colenumerate}{2}
- \item
- 
- \includegraphics[width=3.1cm]{triangle_croquisY}
- \item
- 
- \includegraphics[width=2.8cm]{triangle_croquisW}
- \end{colenumerate}
-%\correction
-
-\end{methode*1}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-
-
-\section{Aire d'un losange}
-
-\vspace{2em}
-
-\begin{aconnaitre}
+\begin{aconnaitre}[Aire d'un losange]
 Pour calculer l’aire d’un losange, on effectue le produit des \textbf{\textcolor{H1}{longueurs des diagonales}} puis on divise le résultat par 2 : 
 
 \begin{tabularx}{\textwidth}{XX}
@@ -327,3 +452,4 @@ Calcule l’aire des losanges suivants :
 %\correction
 
 \end{methode*1}
+

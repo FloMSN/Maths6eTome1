@@ -90,67 +90,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Table des matières
 %%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \themaM %thème déclaré en début de document
 \colorlet{ChapterNumColor}{PartieFonction}
 \chapter{Manuel de 6e\\Tome 1}
 
 \vfill
-
-\begin{commentaire}
-
-
-\textcolor{PartieFonction}{\PrerequisTitleFont 
-Chapitre \ref{ChNbEntiersDecimaux}: Rappels sur les Nombres \dotfill\ page\pageref{ChNbEntiersDecimaux}}
-
-\vspace{2em}
-
-\textcolor{PartieFonction}{\PrerequisTitleFont 
-Chapitre \ref{ChOpNbEntDec}: Opérations avec les nombres décimaux \dotfill\ page \pageref{ChOpNbEntDec}}
-
-\vspace{2em}
-
-\textcolor{PartieGeometrie}{\PrerequisTitleFont 
-Chapitre \ref{ChDroitesAngles}: Points, segments, droites et angles \dotfill\ page \pageref{ChDroitesAngles}}
-
-\vspace{2em}
-
-\textcolor{PartieFonction}{\PrerequisTitleFont 
-Chapitre \ref{ChPrioritesOperations}: Priorités des opérations \dotfill\ page \pageref{ChPrioritesOperations}}
-
-\vspace{2em}
-
-\textcolor{PartieGeometrie}{\PrerequisTitleFont 
-Chapitre \ref{ChTriangles}: Triangles \dotfill\ page \pageref{ChTriangles}}
-
-\vspace{2em}
-
-\textcolor{PartieFonction}{\PrerequisTitleFont 
-Chapitre \ref{ChNbEntiersMultDiv}: Nombres entiers, multiples, diviseurs \dotfill\ page \pageref{ChNbEntiersMultDiv}}
-
-\vspace{2em}
-
-\textcolor{PartieGeometrie}{\PrerequisTitleFont 
-Chapitre \ref{ChQuadrilateres}: Quadrilatères \dotfill\ page \pageref{ChQuadrilateres}}
-
-\vspace{2em}
-
-\textcolor{PartieFonction}{\PrerequisTitleFont 
-Chapitre \ref{ChNbRelatifs}: Nombres relatifs \dotfill\ page \pageref{ChNbRelatifs}}
-
-\vspace{2em}
-
-\textcolor{PartieGeometrie}{\PrerequisTitleFont 
-Chapitre \ref{ChPerimetresAires}: Périmètres et aires \dotfill\ page \pageref{ChPerimetresAires}}
-
-\vspace{2em}
-\textcolor{PartieFonction}{\PrerequisTitleFont 
-Chapitre \ref{ChDurees}: Opérations sur les durées \dotfill\ page\pageref{ChDurees}}
-
-\end{commentaire}
-
+\input{sommaire}
 \vfill
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 % Fin table des matières
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -168,11 +114,12 @@ Chapitre \ref{ChDurees}: Opérations sur les durées \dotfill\ page\pageref{ChDu
 \item … Et de l'association Sésamath Suisse romande:\\ \texttt{http://www.sesamath.ch/}
 \item L'Institut Florimont a réalisé la transcription dans le langage de description de documents libre et gratuit \LaTeX{} en utilisant la classe \texttt{sesamanuel} développée par l'association Sésamath;
 \item E. Villié a réalisé la couverture pour l'Institut Florimont;
-\item Version juin 2018 --- Institut Florimont (Genève).
+\item Version Septembre 2019 --- Institut Florimont (Genève);\vspace{0.3em}
+\item Publication sous licence libre \hspace{1em} \raisebox{-0.4\height}{\includegraphics[width=2cm]{cc-by-sa}}
 \end{itemize}
  \end{prerequis}
 
-\vspace{10em}
+\vspace{1em}
 
 
 
@@ -184,41 +131,41 @@ Chapitre \ref{ChDurees}: Opérations sur les durées \dotfill\ page\pageref{ChDu
 \colorlet{ChapterNumColor}{white}
 \setcounter{chapter}{0}
 
-\themaC
-\themaG
-
-
-\setcounter{page}{6}
-
-\themaC
-\include{NombresEntiersDecimaux/NbEntiersDecimaux}
-
-\themaC
-\include{OperationsNombresEntiersDecimaux/OpNbEntDec}
+\setcounter{page}{4}
 
 \themaG
-\include{PointsSegmentsDroites/PointsSegmentsDroites}
+\include{BonnesIdees/BonnesId}
 
 \themaC
-\include{PrioritesOperations/PrioritesOperations}
+\include{Ensemblesnombres/Ensembles}
 
-\themaG
-\include{Triangles/Triangles}
+%\themaC
+%\include{NombresEntiersDecimaux/NbEntiersDecimaux}
 
-\themaC
-\include{NbsEntiers_Multiples_Diviseurs/NbsEntiers_Multiples_Diviseurs}
+%\themaC
+%\include{OperationsNombresEntiersDecimaux/OpNbEntDec}
 
-\themaG
-\include{Quadrilateres/Quadrilateres}
 
-\themaC
-\include{NbsRelatifs/NbsRelatifs}
+%\themaG
+%\include{PointsSegmentsDroites/PointsSegmentsDroites}
+
+%\themaC
+%\include{PrioritesOperations/PrioritesOperations}
+
+%\themaG
+%\include{Triangles/Triangles}
+
+%\themaC
+%\include{NbsEntiers_Multiples_Diviseurs/NbsEntiers_Multiples_Diviseurs}
+
+%\themaG
+%\include{Quadrilateres/Quadrilateres}
+
+%\themaC
+%\include{NbsRelatifs/NbsRelatifs}
 
 \themaG
 \include{PerimetresAires/PerimetresAires}
-
-%\themaC
-%\include{Durees/Durees}
 
 \AfficheListeMethodes
 \AfficheCorriges[2]

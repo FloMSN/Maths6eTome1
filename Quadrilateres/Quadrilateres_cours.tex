@@ -1,86 +1,158 @@
-\section{Définitions et propriétés des principaux quadrilatères particuliers}
+\prof
+{Les exercices rituels de ce chapitre porteront sur les notations.\\
+\newline
 
-\begin{definition}
-Le \MotDefinition{parallélogramme}{} :
+Voici un lien permettant de trouver le jeu \href{http://jeux2maths.fr/tripoly/}{TRIPOLY} sur le site de jeux2maths.fr. Il s'agit de lire les codages sans se fier au visuel et d'en déduire la nature d'une figure. Attention: ce jeu contient des cerfs-volants à retirer potentiellement de la partie.}
 
-Un quadrilatère dont les côtés opposés sont \textcolor{C2}{\textbf{parallèles deux à deux}} est un parallélogramme. \\[-5em]
-\begin{minipage}[t]{0.76\linewidth}
-\textcolor{H1}{\textbf{Propriétés}} : dans un parallélogramme :
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ \prof{
+\begin{activite}[Jeu: "Qui est-ce?"]
+\underline{Matériel:} 
+Un papier avec le nom d’un élève préalablement bien choisi en secret par le professeur.\\
+\underline{Mise en place:}
+Pousser toutes les tables sur le côté afin de pouvoir utiliser l’espace de la classe.
+Faire mettre tous les élèves au fond de la classe.\\
+\underline{Consigne:}
+Connaissez-vous le jeu du qui est-ce ? Il s’agit de récupérer des informations sur un personnage pour en découvrir l’identité.
+Ici, on va faire la même chose. J’ai écris le prénom de l’un d’entre-vous dans ce papier (pour que vous soyez sûrs que je ne triche pas !). Je vais donner des informations à son sujet. Si vous êtes concernés, vous avancez d’un pas.
+Je dois être capable de donner suffisamment d’informations utiles pour qu’à la fin il ne reste plus que la personne dont le prénom est écrit.\\
+\underline{Activité:} 
+Il/elle:
 \begin{itemize}
- \item Les côtés opposés sont \textcolor{H1}{\textbf{parallèles}} et ont \textcolor{H1}{\textbf{la même longueur}} ;
- \item Les diagonales se coupent \textcolor{H1}{\textbf{en leur milieu}} ;
- \item Les angles opposés sont \textcolor{H1}{\textbf{égaux}}.
- \end{itemize}
- \end{minipage}
- \begin{minipage}[c]{0.18\linewidth}
- \vspace{1cm}
-  \includegraphics[width=2.5cm]{losangeABCDO}
-  \end{minipage} \\
+    \item est élève en 6ème
+    \item est un élève en 6eF...
+    \item est une fille / un garçon
+    \item est blond(e)
+    \item porte des lunettes
+    \item ...
+\end{itemize}
+\underline{Lien avec le chapitre:}
+\begin{itemize}
+    \item est-ce que toutes les \textcolor{G1}{filles} sont des \textcolor{G1}{Marie}?
+    \item Est-ce que \textcolor{G1}{Marie} est une \textcolor{G1}{fille}?
+    \item Est-ce que tous les \textcolor{G1}{6eF2} portent des \textcolor{G1}{lunettes}?
+    \item Est-ce que tous les gens qui portent des \textcolor{G1}{lunettes} (dans cette salle) sont des \textcolor{G1}{6eF2}?
+\end{itemize}
+On constate que ça marche dans un sens mais pas dans l'autre.\\
+\newline
+Il en est de même pour les quadrilatères. Ils ont tous des caractéristiques (de propriétés) qui nous permettent de les classer en commençant par ceux qui en ont le moins jusqu’à celui qui en a le plus. A chaque étape, on ajoute une propriété qui permet de se rapprocher un petit peu plus du quadrilatère le plus complet.\\
+\newline
+On va essayer de faire ça pour les quadrilatères: construire la hiérarchie des quadrilatères.\\
+\begin{itemize}
+    \item est-ce que toutes les \textcolor{G1}{parallélogrammes} sont des \textcolor{G1}{carrés}?
+    \item Est-ce que tous les \textcolor{G1}{carrés} sont des \textcolor{G1}{parallélogrammes}?
+    \item Est-ce que tous les \textcolor{G1}{parallélogrammes} ont \textcolor{G1}{4 angles droits}?
+    \item Est-ce que tous les quadrilatères qui ont \textcolor{G1}{4 angles droits} sont des \textcolor{G1}{rectangles}?
+\end{itemize}
+
+\end{activite}
+}
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Définitions des principaux quadrilatères particuliers}
+RemarqueBN : j'ai placé la figure suivante ici pour voir si on en a besoin, sinon, on l'enlèvera :
+\input{./Quadrilateres/figures/Quadrilateres_Liens}
+\begin{definition}
+Le \MotDefinition{quadrilatère}{} :
+Un quadrilatère est un polygone (figure qui a plusieurs côtés) qui possède 4 côtés. Il est dit quelconque quand il ne possède aucune autre propriété (il n'a rien de particulier).\\
+Il a donc 4 sommets et 4 angles.\\
+
+
+\begin{minipage}[t]{0.50\linewidth}
+\begin{center} \textbf{Quadrilatère convexe}\\
+\begin{tikzpicture}[every node/.style={scale=0.7}]
+    \draw (0,0) node[left]{C}--(1.7,0.8) node[above]{D}--(2.6,-0.7)node[right]{A}--(2.2,-1)node[below]{B}--cycle;
+\end{tikzpicture}
+\end{center}
+\end{minipage}
+\begin{minipage}[t]{0.50\linewidth}
+\begin{center}\textbf{Quadrilatère concave}\\
+\begin{tikzpicture}[every node/.style={scale=0.7}]
+    \draw (0,0) node[left]{U}--(1.7,0.8) node[right]{B}--(1.3,-0.2)node[right=1mm]{L}--(2.4,-1)node[below]{E}--cycle;
+\end{tikzpicture}
+\end{center}
+\end{minipage}
 \end{definition}
 
-\begin{minipage}[t]{0.49\linewidth}
-\begin{center} \includegraphics[width=0.8cm]{flash_droite} \end{center}
- \end{minipage}
- \begin{minipage}[t]{0.49\linewidth}
-\begin{center} \includegraphics[width=1.1cm]{flash_gauche} \end{center}
- \end{minipage} \\[-2em]
+Deux côtés qui possèdent un sommet commun sont appelés 
+\textcolor{B2}{sommets consécutifs}. De même, deux sommets liés par un côté sont dits \textcolor{B2}{consécutifs}.\\
+Deux sommets ou deux côtés non consécutifs d'un quadrilatère sont des \textcolor{B2}{sommets opposés} ou \textcolor{B2}{côtés opposés}.\\
+Les segments qui joignent deux sommets non consécutifs d'un quadrilatère sont appelés \textcolor{B2}{les diagonales} du quadrilatère.
+\begin{center}
+   \input{Quadrilateres/figures/Quadrilateres_Ensembles.tex}
+\end{center}
 
+\begin{definition}
+Le \MotDefinition{trapèze}{} est un quadrilatère dont \textcolor{C2}{\textbf{deux côtés opposés sont parallèles}}. \\
+ \begin{center}
+  \begin{tikzpicture}[rotate=0,every node/.style={scale=0.8}]
+  \draw (-1,0) node[left]{A} -- (1,0) node[right]{B} -- (2,-1)node[right]{C} -- (-1.2,-1) node[left]{D} -- cycle;
+\end{tikzpicture}
+\end{center}
+
+Les côtés parallèles du trapèze sont appelés \textcolor{C2}{\textbf{bases du trapèze}}.
+\end{definition}
+
+\begin{definition}
+Le \MotDefinition{parallélogramme}{} est un quadrilatère dont les côtés opposés sont \textcolor{C2}{\textbf{parallèles deux à deux}}. \\
+  \begin{center}
+  \begin{tikzpicture}[rotate=10,every node/.style={scale=0.8}]
+  \draw (-1,0) node[left]{A} -- (1,0) node[right=3pt]{B} -- (2,-1)node[right]{C} -- (0,-1) node[left=3pt]{D} -- cycle;
+\end{tikzpicture}
+\end{center}
+\end{definition}
+
+ 
 \begin{minipage}[t]{0.49\linewidth}
   \begin{definition}
-   Le \MotDefinition{rectangle}{} :
-   Un quadrilatère qui a \textcolor{C2}{\textbf{4 angles droits}} est un rectangle.
-   
-    \begin{center}\includegraphics[width=3.5cm]{rectangleABCD}\end{center}
-    
-   \textcolor{H1}{\textbf{Propriétés}} :
-    \begin{itemize}
-     \item Un rectangle est un \textcolor{H1}{\textbf{parallélogramme}} donc il possède toutes les propriétés d'un \textcolor{H1}{\textbf{parallélogramme}} ;
-     \item Les diagonales d'un rectangle ont \textcolor{H1}{\textbf{la même longueur}}.
-     \end{itemize}
-   \end{definition}
+   Le \MotDefinition{rectangle}{} est un parallélogramme qui a \textcolor{C2}{\textbf{1 angle droit}}.
+  
+\begin{center}
+\begin{tikzpicture}[rotate=0,every node/.style={scale=0.8}]
+\draw (-1,0) node[left]{A} -- (1,0) node[right]{B} -- (1,-1)node[right]{C} -- (-1,-1) node[left]{D} -- cycle;
+\draw[very thick,color=C2] (-1,-0.2)-|(-0.8,0);
+\end{tikzpicture}
+\end{center}
+ \end{definition}
  \end{minipage}
  %
  \begin{minipage}[t]{0.59\linewidth}
    \begin{definition}
-   Le \MotDefinition{losange}{} :
-   Un quadrilatère qui a \textcolor{C2}{\textbf{4 côtés de même longueur}} est un losange.
+   Le \MotDefinition{losange}{} un parallélogramme qui a \textcolor{C2}{\textbf{2 côtés consécutifs de même longueur}}.
    
-     \begin{center}\includegraphics[width=2cm]{losangeABCD2}\end{center}
-    
-   \textcolor{H1}{\textbf{Propriétés}} :
-    \begin{itemize}
-     \item Un losange est un \textcolor{H1}{\textbf{parallélogramme}} donc il possède toutes les propriétés d'un \textcolor{H1}{\textbf{parallélogramme}} ;
-     \item Les diagonales d'un losange se coupent \textcolor{H1}{\textbf{en leur milieu}} et sont \textcolor{H1}{\textbf{perpendiculaires}}.
-     \end{itemize}
+\begin{center}
+\begin{tikzpicture}[rotate=0,every node/.style={scale=0.8}]
+\draw (-0.7,0) node[left]{A} -- (0,1) node[above]{B} -- (0.7,0)node[right]{C} -- (0,-1) node[below]{D} -- cycle;
+\node[color=C2,rotate=45] at (-.35,.5){$\times$};
+\node[color=C2,rotate=-45] at (.35,.5){$\times$};
+%\node[color=C2,rotate=45] at (.35,-.5){$\times$};
+%\node[color=C2,rotate=-45] at (-.35,-.5){$\times$};
+\end{tikzpicture}
+\end{center}
    \end{definition}
-  \end{minipage} \\
-  
-\begin{minipage}[t]{0.49\linewidth}
-\begin{center} \includegraphics[width=1.1cm]{flash_gauche} \end{center}
- \end{minipage}
- \begin{minipage}[t]{0.49\linewidth}
-\begin{center} \includegraphics[width=0.8cm]{flash_droite} \end{center}
- \end{minipage} \\ [-2em]
+  \end{minipage} 
   
 \begin{definition}
-Le \MotDefinition{carré}{} :
+Le \MotDefinition{carré}{} est un parallélogramme qui a les propriétés du rectangle et du losange. \\
 
-Un quadrilatère qui a \textcolor{C2}{\textbf{4 côtés de même longueur et 4 angles droits}} est un carré. \\[-3em]
-\begin{minipage}[t]{0.7\linewidth}
-\textcolor{H1}{\textbf{Propriétés}} :
-\begin{itemize}
- \item Un carré est à la fois \textcolor{H1}{\textbf{un parallélogramme}}, \textcolor{H1}{\textbf{un losange}} et \textcolor{H1}{\textbf{un rectangle}} donc il a toutes les propriétés de ces quadrilatères ;
- \item Les diagonales d'un carré sont \textcolor{H1}{\textbf{perpendiculaires}} et \textcolor{H1}{\textbf{de même longueur}}.
- \end{itemize}
- \end{minipage}
- \begin{minipage}[c]{0.18\linewidth}
- \vspace{1cm}
- \centering
-  \includegraphics[width=2cm]{carreABCD}
-  \end{minipage} \\
+\begin{center}
+\begin{tikzpicture}[rotate=0,every node/.style={scale=0.8}]
+\draw (0,0) node[left]{A} -- (1,0) node[right]{B} -- (1,-1)node[right]{C} -- (0,-1) node[left]{D} -- cycle;
+\draw[very thick,color=C2] (0,-0.2)-|(0.2,0);
+\node[color=C2] at (.5,0){$\times$};
+\node[color=C2] at (1,-.5){$\times$};
+%\node[color=C2] at (.5,-1){$\times$};
+%\node[color=C2] at (0,-.5){$\times$};
+\end{tikzpicture}
+\end{center}
 \end{definition}
 
+\section{Propriétés des principaux quadrilatères particuliers}
 
+\input{./Quadrilateres/figures/QuadrilateresPptes}
 
 \section{Méthodes de construction}
 
@@ -94,7 +166,9 @@ Soient trois points $A$, $B$ et $C$ non alignés. Place le point $D$ tel que $AB
 
 
 \begin{tabularx}{\textwidth}{X|X|X}
- \qquad \includegraphics[width=2.1cm]{angleABC8} & \includegraphics[width=3cm]{angle_parallele} & \includegraphics[width=3cm]{quadABCD} \\ 
+   \qquad \input{./Quadrilateres/figures/Parallelo_RegleEquerre_1} & \input{./Quadrilateres/figures/Parallelo_RegleEquerre_2} & \input{./Quadrilateres/figures/Parallelo_RegleEquerre_3} \\ 
+ 
+ 
  On trace les côtés $[AB]$ et $[BC]$ du quadrilatère $ABCD$. Le quadrilatère $ABCD$ est un parallélogramme, donc ses côtés opposés sont parallèles deux à deux : soit $(AB) \parallel (CD)$. & On trace la parallèle à $(AB)$ passant par $C$. & On trace la parallèle à $(BC)$ passant par $A$. Ces deux droites sont sécantes en $D$.
  
  Ainsi $ABCD$ a ses côtés opposés parallèles deux à deux, c'est donc bien un parallélogramme. \\
@@ -123,7 +197,7 @@ Réalise un croquis avant de construire le parallélogramme $PRLG$ tel que $PR 
  \begin{exemple*1}
  
   \begin{tabularx}{\textwidth}{X|X|X}
- \qquad \includegraphics[width=1.2cm]{angleABC_2} & \qquad \includegraphics[width=1.9cm]{compasABC} & \includegraphics[width=2.4cm]{compasABCD}  \\ 
+   \qquad \input{./Quadrilateres/figures/Parallelo_Compas_1} &   \qquad \input{./Quadrilateres/figures/Parallelo_Compas_2} &   \input{./Quadrilateres/figures/Parallelo_Compas_3} \\ 
  On trace les côtés $[AB]$ et $[BC]$ du quadrilatère $ABCD$.
  
  Le quadrilatère $ABCD$ est un parallélogramme, donc ses côtés opposés $[AB]$ et $[CD]$ sont de la même longueur deux à deux : soit $AB = CD$ et $BC = AD$. & À l'aide du compas, on reporte la longueur $AB$ à partir du point $C$. & On reporte la longueur $BC$ à partir du point $A$. On place le point $D$ à l'intersection des deux arcs de cercle puis on trace les côtés $[AD]$ et $[CD]$.
@@ -165,7 +239,7 @@ On fait d'abord un croquis. Dans un losange, les quatre côtés ont la même lon
   \end{minipage} \\
   
 \begin{tabularx}{\textwidth}{X|X}
- \qquad \includegraphics[width=2.6cm]{triangleABD} & \includegraphics[width=4.8cm]{losangeABCD} \\ 
+\qquad \input{./Quadrilateres/figures/Losange_Compas_1} & \qquad \input{./Quadrilateres/figures/Losange_Compas_2} \\
  On trace un segment $[BD]$. On construit un triangle $ABD$ isocèle en $A$ tel que $AB = AD = 6$ cm. & On construit le triangle $CBD$ isocèle en $C$ tel que $CB = CD = 6$ cm. \\
 \end{tabularx} \\
 

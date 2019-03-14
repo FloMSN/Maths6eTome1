@@ -1,0 +1,163 @@
+
+\begin{tikzpicture}[every node/.style={scale=0.7}]
+\draw[dashed](-0.8,0)--(1.2,0);
+\draw[dashed](-0.8,1.2)--(1,1.2);
+\draw[dashed](-0.92,1.39)--(.16,-0.23);
+\draw[dashed](0.08,1.39)--(1.15,-.22);
+\draw[thick,H1,densely dashed,->,>=stealth](.43,0.85)--(-0.26,0.39); 
+
+\draw[thick] (0,0) node{$\times$} -- (1,0) node{$\times$} -- (0.2,1.2)node{$\times$};
+\node[below right] at (0,0){A};
+\node[below right] at (1,0){B};
+\node[above right] at (0.2,1.2){C};
+\node[above right] at (-0.8,1.2){D};
+\node at (-0.8,1.2){$\times$};
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Début règle !! Si la figure est tournée, il faut
+%rajouter l'angle de rotation dans le node des graduation
+%pour que les nombres soient écrits correctement
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%% 
+
+    %Graduation max. de la règle
+    \def \Taille {6}
+    %Définition de l 'angle de rotation de la règle
+    \def \Rotation {-90-56.31}
+    %Définition du décalage de la règle
+    \def \DecalX {0.7}
+    \def \DecalY {1.6}
+    %Couleur des élèments de la règle (sauf le remplissage)
+    \def \RegleColor {blue!60}
+
+\begin{scope}[shift={(\DecalX,\DecalY)},rotate=\Rotation,scale=.35]
+    % contours de la règle
+    \draw[color=\RegleColor, fill =blue!5, opacity=0.5,rounded corners=2pt] (-0.2,0.5) rectangle (\Taille+0.2,-0.5);	%Dont couleur de remplissage
+    % graduation 1 mm
+    \foreach \a in {0,0.1,...,\Taille}{\draw[color=\RegleColor] (\a,0.5)--(\a,0.42);}
+    % graduation 5 mm
+    \foreach \a in {0,0.5,...,\Taille}{\draw[color=\RegleColor] (\a,0.42)--(\a,0.35);}
+    % graduation et repères 10 mm
+    \foreach \a in {0,1,...,\Taille}{\draw[color=\RegleColor] (\a,0.35)--(\a,0.25);}
+\end{scope}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Fin de la règle
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Définition des paramètres de l'équerre
+%et de son positionnement
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def \xorigine {0.25}; %abscisse de l'origine de l'équerre posée avec un xshift
+\def \yorigine {1.08}; %ordonnée de l'origine de l'équerre posée avec un yshift
+\def \rotation {-90-56.31}; %angle de rotation de l'équerre
+\def \longueur {4}; %longueur de l'équerre
+\def \largeur {2}; %largeur de l'équerre
+\def \epaisseur {\longueur * 0.1}; %épaisseur de la partie «colorée» de l'équerre
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Tracé de l'équerre
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{scope}[xshift=\xorigine cm,yshift=\yorigine cm,rotate=\rotation,scale=0.25]
+
+%contour extérieur de l'équerre
+\coordinate (A) at (0,0) ; %«origine» de l'équerre
+\coordinate (B) at (\largeur,0) ;
+\coordinate (C) at (0,\longueur) ;
+\draw [gray](A)--(B)--(C)--cycle;
+
+
+%contour intérieur de l'équerre
+\coordinate (D) at (\epaisseur,\epaisseur) ;
+\coordinate (E) at ($\largeur*(1,0)-{\largeur * \epaisseur / \longueur}*(1,0)-\epaisseur*(1,0)+\epaisseur*(0,1)$);
+\coordinate (F) at ($\epaisseur*(1,0)+\longueur*(0,1)-{2*\longueur * \epaisseur / \largeur}*(0,1)$);
+\draw [gray](D)--(E)--(F)--cycle;
+
+%partie colorée de l'équerre
+\fill [color=blue!50!gray,opacity=.4,even odd rule] (A)--(B)--(C)--cycle (D)--(E)--(F)--cycle;%l'option even odd rule permet de faire le remplissage entre les 2 zones définies
+
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Fin de l'équerre
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Définition des paramètres de l'équerre
+%et de son positionnement
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def \xorigine {-0.43}; %abscisse de l'origine de l'équerre posée avec un xshift
+\def \yorigine {0.63}; %ordonnée de l'origine de l'équerre posée avec un yshift
+\def \rotation {-90-56.31}; %angle de rotation de l'équerre
+\def \longueur {4}; %longueur de l'équerre
+\def \largeur {2}; %largeur de l'équerre
+\def \epaisseur {\longueur * 0.1}; %épaisseur de la partie «colorée» de l'équerre
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Tracé de l'équerre
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{scope}[xshift=\xorigine cm,yshift=\yorigine cm,rotate=\rotation,scale=0.25]
+
+%contour extérieur de l'équerre
+\coordinate (A) at (0,0) ; %«origine» de l'équerre
+\coordinate (B) at (\largeur,0) ;
+\coordinate (C) at (0,\longueur) ;
+\draw [gray](A)--(B)--(C)--cycle;
+
+
+%contour intérieur de l'équerre
+\coordinate (D) at (\epaisseur,\epaisseur) ;
+\coordinate (E) at ($\largeur*(1,0)-{\largeur * \epaisseur / \longueur}*(1,0)-\epaisseur*(1,0)+\epaisseur*(0,1)$);
+\coordinate (F) at ($\epaisseur*(1,0)+\longueur*(0,1)-{2*\longueur * \epaisseur / \largeur}*(0,1)$);
+\draw [gray](D)--(E)--(F)--cycle;
+
+%partie colorée de l'équerre
+\fill [color=blue!50!gray,opacity=.4,even odd rule] (A)--(B)--(C)--cycle (D)--(E)--(F)--cycle;%l'option even odd rule permet de faire le remplissage entre les 2 zones définies
+
+\end{scope}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Fin de l'équerre
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Début crayon
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{scope}[xshift=-0cm,yshift=0cm,rotate=-20,scale=.15] %le crayon, xshift et yshift pour les coordonnées de la pointe, rotate pour l'orientation du crayon
+\def \couleur {black}
+\coordinate (O) at (0,0);
+\fill[\couleur!40] (-0.2,4.8) -- (0.2,4.8) -- (0.2,0.8) --(0.1,0.65) -- (0,0.8) -- (-0.1,0.66) -- (-0.2,0.8) -- cycle; %corps du crayon
+\draw[color=white] (0,4.8) -- (0,0.8); %trait intérieur du crayon
+\fill[\couleur!90] (-0.2,4.3) -- (0,4.27) -- (0.2,4.3) -- (0.2,4.8) arc(30:150:0.23cm); %partie haute du crayon
+\fill[brown!40] (-0.2,0.8) -- (O)node[coordinate,pos=0.75](a){} -- (0.2,0.8)node[coordinate,pos=0.25](b){} -- (0.1,0.65) -- (0,0.8) -- (-0.1,0.66) -- cycle; %pointe du crayon (partie taillée)
+\fill[\couleur!90] (a) -- (O) -- (b) -- cycle; %mine du crayon
+\end{scope}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+%Fin crayon
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{tikzpicture}

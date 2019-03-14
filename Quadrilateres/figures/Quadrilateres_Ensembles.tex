@@ -1,0 +1,138 @@
+\begin{tikzpicture}[every node/.style={scale=0.6}]
+
+%pour le tracé
+%\draw[gray!30] (-5,-5) grid (5,5);
+%\fill[red] (0,0) circle (3pt);
+
+% définition des styles
+\def\couleur{yellow!50}
+\tikzstyle{quadri}=[draw,fill=\couleur,text=blue]
+
+%carré
+\begin{scope}[xshift=1.6cm,yshift=-0.2cm,scale=0.8,rotate=-10] 
+\draw (0,0)--(1,0)--(1,1)--(0,1)--cycle;
+%\draw (0.1,0)|-(0,0.1);
+\end{scope}
+
+%carré avec 4 côtés égaux
+%\begin{scope}[xshift=1.8cm,yshift=-1cm,scale=0.8,rotate=10] 
+%\draw (0,0)--(1,0)--(1,1)--(0,1)--cycle;
+%\node at (0.5,0) {$\times$};
+%\node at (1,0.5) {$\times$};
+%\node at (0,0.5) {$\times$};
+%\node at (0.5,1) {$\times$};
+%\end{scope}
+
+%losange avec 4 côtés égaux
+\begin{scope}[xshift=3.8cm,yshift=0.8cm,rotate=-20] 
+\draw (0,0)--(0.6,1)--(1.2,0)--(0.6,-1)--cycle;
+\node at (0.3,0.5) {$\circ$};
+\node at (0.9,0.5) {$\circ$};
+\node at (0.9,-0.5) {$\circ$};
+\node at (0.3,-0.5) {$\circ$};
+\end{scope}
+
+%losange avec diagonales perpendiculaires
+\begin{scope}[xshift=5.3cm,yshift=-0.4cm,rotate=-45] 
+\draw (0,0)--(0.6,1)--(1.2,0)--(0.6,-1)--cycle;
+\draw (0,0)--(1.2,0);
+\draw (0.6,1)--(0.6,-1);
+\draw (0.7,0)|-(0.6,0.1);
+\end{scope}
+
+%rectangle avec 1 angle droit
+\begin{scope}[xshift=-1.1cm,yshift=0.7cm,rotate=-15] 
+\draw (0,0)--(0,.8)--(1.5,.8)--(1.5,0)--cycle;
+\draw (0.1,0)|-(0,0.1);
+\end{scope}
+
+%rectangle avec diagonales de même longueur
+\begin{scope}[xshift=-2.3cm,yshift=-1.2cm,rotate=40] 
+\draw (0,0)--(0,.8)--(1.6,.8)--(1.6,0)--cycle;
+\draw (0,0)--(1.6,0.8);
+\draw (0,.8)--(1.6,0);
+\node at (0.4,0.2) {$\circ$};
+\node at (1.2,0.2) {$\circ$};
+\node at (0.4,0.6) {$\circ$};
+\node at (1.2,0.6) {$\circ$};
+\end{scope}
+
+%parallélogramme avec diagonales se coupant au milieu
+\begin{scope}[xshift=-0.6cm,yshift=2.4cm,rotate=-10] 
+\draw (0,0)--(0.4,.8)--(2,.8)--(1.6,0)--cycle;
+\draw (0,0)--(2,0.8);
+\draw (0.4,.8)--(1.6,0);
+\node at (0.5,0.2) {$\circ$};
+\node at (1.5,0.6) {$\circ$};
+\node[rotate=50] at (0.7,0.6) {$\times$};
+\node[rotate=50] at (1.3,0.2) {$\times$};
+\end{scope}
+
+%parallélogramme avec côtés opposés égaux
+\begin{scope}[xshift=2.2cm,yshift=2cm,rotate=10] 
+\draw (0,0)--(0.4,0.8)--(2,0.8)--(1.6,0)--cycle;
+\node at (0.2,0.4) {$\circ$};
+\node at (1.8,0.4) {$\circ$};
+\node[rotate=0] at (1.2,0.8) {$\times$};
+\node[rotate=0] at (0.8,0) {$\times$};
+\end{scope}
+
+
+%parallélogramme avec angles opposés égaux
+\begin{scope}[xshift=1.5cm,yshift=-3cm,rotate=0] 
+\draw (0,0)--(0.4,0.8)--(2,0.8)--(1.6,0)--cycle;
+\end{scope}
+
+%quadrilatère quelconque
+\begin{scope}[xshift=5.8cm,yshift=-3cm,rotate=0] 
+\draw (0,0)--(1,0.7)--(1.2,-0.15)--(0.5,-0.3)--cycle;
+\end{scope}
+
+%trapèze 1
+\begin{scope}[xshift=-4.8cm,yshift=1.5cm,scale=0.8,rotate=20] 
+\draw (0,0)--(0.8,0.6)--(1.8,0.6)--(2,0)--cycle;
+\end{scope}
+
+%trapèze 2
+\begin{scope}[xshift=-4.8cm,yshift=1cm,scale=0.9,rotate=-20] 
+\draw (0,0)--(0.1,0.4)--(0.7,0.4)--(1,0)--cycle;
+\end{scope}
+
+%cerf-volant avec diagonales perpendiculaires et côtés consécutifs égaux
+\begin{scope}[xshift=7.6cm,yshift=1.5cm,rotate=10] 
+\draw (0,0)--(0.5,0.6)--(1,0)--(0.5,-1.2)--cycle;
+\draw (0,0)--(1,0);
+\draw (0.5,0.6)--(0.5,-1.2);
+\draw (0.6,0)|-(0.5,0.1);
+\node[rotate=40] at (0.25,0.3) {$\times$};
+\node[rotate=40] at (0.75,0.3) {$\times$};
+\node[rotate=0] at (0.75,-0.6) {$\circ$};
+\node[rotate=0] at (0.25,-0.6) {$\circ$};
+\end{scope}
+
+
+%%%%%%%% Éllipes des ensembles
+\begin{scope}[xshift=0cm,yshift=0cm,rotate=0] 
+
+%\tikzset{ellipse1/.pic={\draw [xscale=0.8,ultra thick,color=green] (0,0) circle (2);}}
+%\tikzset{ellipse2/.pic={\draw [xscale=0.8,ultra thick,color=red] (0,0) circle (2);}}
+%\pic at (5,0) {ellipse1};
+%\pic at (6,0) {ellipse2};
+
+\begin{scope} %coloration de la zone des carrés
+\clip [xscale=1.6,yscale=1] (0,0) circle (2);
+\fill[xscale=1.6,yscale=1,color=A3,opacity=0.3] (2.5,0) circle (2); 
+\end{scope}
+
+\draw[xscale=1.6,yscale=1,ultra thick,color=H2] (0,0) circle (2);
+\draw[xscale=1.6,yscale=1,ultra thick, color=B2] (2.5,0) circle (2);
+\draw[xscale=1.6,yscale=1,ultra thick, color=J2] (1.3,0) circle (3.5);
+\draw[xscale=1.95,yscale=1.2,ultra thick, color=F2] (1,0) circle (4);
+\end{scope}
+
+
+%elipse autour des trapèzes
+\node[draw,ultra thick, color=C1,shape=ellipse,minimum width=4cm,minimum height=3cm,rotate=50] (A) at (-4.2,1.5) {};
+\node[text width=2cm,text centered] (B) at (-6,3){trapèzes : deux côtés opposés parallèles};
+\draw (B) to [out=-90,in=90] (A);
+\end{tikzpicture}

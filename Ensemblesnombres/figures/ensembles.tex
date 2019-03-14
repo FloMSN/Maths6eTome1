@@ -1,0 +1,32 @@
+\begin{tikzpicture}[scale=2.5]
+
+% Back faces
+\foreach \i/\col in {1/yellow, 0.8/red, 0.6/green, 0.4/brown, 0.2/J1}{
+\filldraw[fill=\col] ({-(0.5+\i)},0,{-(0.5+\i)}) -- ({(0.5+\i)},0,{-(0.5+\i)}) -- 
+({(0.5+\i)},{6-5*\i},{-(0.5+\i)}) -- ({-(0.5+\i)},{6-5*\i},{-(0.5+\i)}) -- cycle;
+}
+
+% Left faces
+\foreach \i/\col in {1/yellow, 0.8/red, 0.6/green, 0.4/brown, 0.2/J1}{
+\filldraw[fill=\col] ({-(0.5+\i)},0,{-(0.5+\i)}) -- ({-(0.5+\i)},0,{(0.5+\i)}) -- 
+({-(0.5+\i)},{6-5*\i},{(0.5+\i)}) -- ({-(0.5+\i)},{6-5*\i},{-(0.5+\i)}) -- cycle;
+}
+
+% right faces
+\foreach \i/\col in {0.2/J1,0.4/brown,0.6/green,0.8/red,1/yellow}{
+\filldraw[fill=\col] ({(0.5+\i)},0,{-(0.5+\i)}) -- ({(0.5+\i)},0,{(0.5+\i)}) -- 
+({(0.5+\i)},{6-5*\i},{(0.5+\i)}) -- ({(0.5+\i)},{6-5*\i},{-(0.5+\i)}) -- cycle;
+}
+
+% Front faces
+\foreach \i/\col in {0.2/J1,0.4/brown,0.6/green,0.8/red,1/yellow}{
+\filldraw[fill=\col] ({-(0.5+\i)},0,{(0.5+\i)}) -- ({(0.5+\i)},0,{(0.5+\i)}) -- 
+({(0.5+\i)},{6-5*\i},{(0.5+\i)}) -- ({-(0.5+\i)},{6-5*\i},{(0.5+\i)}) -- cycle;
+}
+
+\draw (0,4.5,0.5) node {$\mathbf{N}$};
+\draw (0,3.5,0.7) node {$\mathbf{Z}$};
+\draw (0,2.5,0.9) node {$\mathbf{D}$};
+\draw (0,1.5,1.1) node {$\mathbf{Q}$};
+\draw (0,0.5,1.3) node {$\mathbf{R}$};
+\end{tikzpicture}

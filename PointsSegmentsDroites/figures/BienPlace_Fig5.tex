@@ -1,0 +1,87 @@
+\begin{tikzpicture}[scale=.9]
+
+\def \RotFigure {0} %rotation de toute la figure y compris textes
+\begin{scope}[rotate=\RotFigure]
+
+\def \CharSize {1.4};
+\def \BulletSize {1};
+\coordinate (A) at (0,0);
+\coordinate (B) at (-1.324,0.704);
+\coordinate (C) at (2,0);
+\coordinate (U) at (-1.766,0.939);
+\coordinate (V) at (3.3,0);
+
+\draw[line width = 1.3pt] (U) -- (A) -- (V);
+	
+%début du rapporteur
+    %Définition de l 'angle de rotation du rapporteur
+    \def \Rotation {0} 
+    %Définition du décalage du rapporteur
+    \def \DecalX {0}
+    \def \DecalY {0}
+    %Couleur des élèments du rapporteur (sauf le remplissage)
+    \def \RapColor {blue!60}
+
+\begin{scope}[shift={(\DecalX,\DecalY)},rotate=\Rotation]
+    % contours du rapporteur
+    \draw[color=\RapColor, fill =blue!10, opacity=0.5] (-3,0) arc(180:0:3)--(3,-0.5)--(-3,-0.5)--cycle;	%Dont couleur de remplissage
+    \draw[color=\RapColor] (-2,0)--(2,0);
+    \draw[color=\RapColor] (0,-0.2)--(0,2);
+    % graduation externe 1 degrés
+    \foreach \a in {0,1,...,180}{\draw[color=\RapColor] (\a:3)--(\a:2.85);}
+    % graduation externe 5 degrés
+    \foreach \a in {0,5,...,180}{\draw[color=\RapColor] (\a:2.85)--(\a:2.8);}
+    % double graduation
+   \foreach \a/\b in {%
+        0/-90,10/-80,20/-70,30/-60,40/-50,50/-40,%
+        60/-30,70/-20,80/-10,90/0,100/10,110/20,%
+        120/30,130/40,140/50,150/60,160/70,170/80,180/90%
+    }{
+    % graduation externe 10 degrés
+    \draw[color=\RapColor] (\a:2.80)--(\a:2.75) 
+    node[scale=0.7, rotate=\b+\Rotation+\RotFigure] (\a) at (\a:2.65){\a};
+    % graduation interne 10 degrés
+    \draw[color=\RapColor] (\a:2.5)--(\a:2.45)
+	node[thin,scale=0.7, rotate=-\b+\Rotation+\RotFigure] (\a) at (180-\a:2.3){\a}; }
+    % demi-cercle intérieur
+    \draw[color=\RapColor](-2.5,0) arc(180:0:2.5);
+    %demi-cercle à l'origine
+    \draw[color=\RapColor](-0.2,0) arc(180:0:0.2);
+\end{scope}
+%fin du rapporteur
+
+\draw (A) node [below,scale=\CharSize,rotate=\RotFigure]{A};
+\draw (A) node[scale=\BulletSize]{$\bullet$};
+\draw (B) node [below,scale=\CharSize,rotate=\RotFigure]{B};
+\draw (B) node[scale=\BulletSize]{$\bullet$};
+\draw (C) node [below left,scale=\CharSize,rotate=\RotFigure]{C};
+\draw (C) node[scale=\BulletSize]{$\bullet$};
+
+	
+%début de la règle
+    %Graduaton max. de la règle
+    \def \TailleRegle {10}
+    %Définition de l 'angle de rotation de la règle
+    \def \RotationRegle {152}
+    %Définition du décalage de la règle
+    \def \DecalRegleX {0.7}
+    \def \DecalRegleY {0}
+    %Couleur des élèments de la règle (sauf le remplissage)
+    \def \RegleColor {green!80}
+
+\begin{scope}[shift={(\DecalRegleX,\DecalRegleY)},rotate=\RotationRegle, scale=0.6]
+    % contours de la règle
+    \draw[color=\RegleColor, fill =green!10, opacity=0.5] (-0.4,0.5) rectangle (\TailleRegle+0.4,-0.5);	%Dont couleur de remplissage
+    % graduation 1 mm
+    \foreach \a in {0,0.1,...,\TailleRegle}{\draw[color=\RegleColor] (\a,0.5)--(\a,0.42);}
+    % graduation 5 mm
+    \foreach \a in {0,0.5,...,\TailleRegle}{\draw[color=\RegleColor] (\a,0.42)--(\a,0.35);}
+    % graduation et repères 10 mm
+    \foreach \a in {0,1,...,\TailleRegle}{\draw[color=\RegleColor] (\a,0.35)--(\a,0.25)
+    node[scale=0.7, rotate=\RotationRegle+\RotFigure] (\a) at (\a,0.02){\a};}
+    
+\end{scope}
+%fin de la règle
+
+\end{scope}
+\end{tikzpicture}

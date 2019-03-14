@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=0.7]%Attention : si on change le scale, il faut aussi le changer dans le \tikset
+\tikzset{noeud/.style={minimum width=1cm,minimum height=1cm,draw,rectangle,color=G1,rounded corners=4pt,fill=G1!10,text=black,scale=0.7}}
+
+\foreach \a/\n in {0/97,1/89,2/83,4/71,5/83,6/97}{\node[noeud] at (0.5+\a*1.5,0.5){\n};}
+
+\foreach \a/\n in {0/61,1/43,2/21,3/31,4/41,5/59,6/73}{\node[noeud] at (0.5+\a*1.5,2){\n};}
+
+\foreach \a/\n in {0/13,1/93,2/47,3/89,4/27,5/53,6/67}{\node[noeud] () at (0.5+\a*1.5,3.5){\n};}
+
+\foreach \a/\n in {0/19,1/59,2/81,3/79,4/41,5/89,6/91}{\node[noeud] () at (0.5+\a*1.5,5){\n};}
+
+\foreach \a/\n in {0/29,1/57,2/61,3/47,4/63,5/13,6/23}{\node[noeud] at (0.5+\a*1.5,6.5){\n};}
+
+\foreach \a/\n in {0/43,1/67,2/49,3/17,4/51,5/17,6/11}{\node[noeud] at (0.5+\a*1.5,8){\n};}
+
+\foreach \a/\n in {0/37,1/23,2/11,4/79,5/31,6/19}{\node[noeud] at (0.5+\a*1.5,9.5){\n};}
+
+%%%% Les traits entre cases :
+\foreach \a in {0,1.5,...,7.5} {\foreach \b in {0,1.5,...,9}{\draw [blue] (\a+1,\b+0.5)--(\a+1.5,\b+0.5);}}
+\foreach \a in {0,1.5,...,9} {\foreach \b in {0,1.5,...,7.5}{\draw [blue](\a+0.5,\b+1)--(\a+0.5,\b+1.5);}}
+
+%%% Les deux cases de départ et d'arrivée
+
+\node[minimum width=1cm,minimum height=1cm,draw,rectangle,color=F1,rounded corners=4pt,fill=F1!10,text=F1,scale=0.7] at (5,0.5){Y};
+\node[minimum width=1cm,minimum height=1cm,draw,rectangle,color=F1,rounded corners=4pt,fill=F1!10,text=F1,scale=0.7] at (5,9.5){X};
+\end{tikzpicture}

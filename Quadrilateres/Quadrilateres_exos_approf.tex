@@ -25,10 +25,13 @@ Observe attentivement le codage de la figure ci‑contre.
 Déduis-en une méthode pour construire un hexagone régulier de 4 cm de côté puis effectue la construction sur ton cahier.
  \end{minipage} \hfill%
  \begin{minipage}[c]{0.46\linewidth}
-  \begin{center} \includegraphics[width=3.5cm]{hexagone} \end{center}
+  \begin{center}
+  \begin{tikzpicture}[every node/.style={scale=0.8}]
+\foreach \x in {0,1,2,3,4,5}{\draw (0,0)--(60*\x:1.6) node[midway,sloped]{$\times$}; \draw (60*\x:1.6)--(60+60*\x:1.6) node[midway,sloped]{$\times$};}
+\end{tikzpicture}
+ \end{center}
   \end{minipage} \\
 \end{exercice}
-
 
 \begin{exercice}[Quadrilatères inscrits dans un cercle]
 \begin{enumerate}

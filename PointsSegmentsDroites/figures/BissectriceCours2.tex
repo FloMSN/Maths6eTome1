@@ -1,0 +1,28 @@
+\begin{tikzpicture}[scale=0.6,rotate=20,every node/.style={scale=1.2}]
+
+\draw (-0.5,0) node[above left]{0}--(4,0) node[below]{$y$};
+\draw (0,0) --(40:4) node[above left]{$x$};
+\draw (0,0)--+(210:0.5);
+
+\draw (1.532,1.286) arc (40:50:2);
+\draw (1.532,1.286) arc (40:30:2);
+\draw (2,0) arc (0:10:2);
+\draw (2,0) arc (0:-10:2);
+
+\draw [thick,blue,dashed](0,0) arc (180:0:2);
+\draw [thick,blue,dashed](0,0) arc (-140:40:2);
+
+%\draw (2,0) node{$\bullet$};
+%\draw (1.532,1.286) node{$\bullet$};
+%\draw (0,0)--(4.698,1.71);
+
+\coordinate (A) at (1.532,1.286) ;
+\coordinate (B) at (3.064,2.572) ;
+
+\begin{scope}[scale=0.35]
+\Compas{A}{B}
+\end{scope}
+
+
+\end{tikzpicture}
+

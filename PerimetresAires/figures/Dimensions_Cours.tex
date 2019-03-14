@@ -1,0 +1,47 @@
+\begin{tikzpicture} % longueur, surface et volune
+
+%le segment (longueur)
+\draw (0,0)--(2,0) node[scale=0.8,midway,above]{longueur} node[scale=0.8,midway,below]{1 dimension};
+\draw (0,0)--+(0,0.15)--+(0,-0.15);
+\draw (2,0)--+(0,0.15)--+(0,-0.15);
+
+%le carré (surface)
+\begin{scope}[xshift=3cm]
+\draw[fill=A2] (0,0)--(2,0) node[scale=0.8,midway,below]{2 dimensions} --(2,2) --(0,2) node[scale=0.8,midway,above]{surface} -- cycle;
+\end{scope}
+
+%le cube (volume)
+\begin{scope}[xshift=8cm]
+\def \Width {2};
+\def \Height {2};
+\def \Depth {2};
+\coordinate (O) at (0,0,0);
+\coordinate (A) at (0,\Width,0);
+\coordinate (B) at (0,\Width,\Height);
+\coordinate (C) at (0,0,\Height);
+\coordinate (D) at (\Depth,0,0);
+\coordinate (E) at (\Depth,\Width,0);
+\coordinate (F) at (\Depth,\Width,\Height);
+\coordinate (G) at (\Depth,0,\Height);
+
+\draw[blue,fill=blue] (O) -- (C) -- (G) -- (D) -- cycle;% Bottom Face
+\draw[blue,fill=A2] (O) -- (A) -- (E) -- (D) -- cycle;% Back Face
+\draw[blue,fill=pink] (O) -- (A) -- (B) -- (C) -- cycle;% Left Face
+\draw[blue,fill=J1,opacity=0.8] (D) -- (E) -- (F) -- (G) -- cycle;% Right Face
+\draw[blue,fill=J2,opacity=0.6] (C) -- (B) -- (F) -- (G) -- cycle;% Front Face
+\draw[blue,fill=F,opacity=0.8] (A) -- (B) -- (F) -- (E) -- cycle;% Top Face
+
+
+\path (C)--(G) node[scale=0.8,midway,below]{3 dimensions};
+\path (A)--(E) node[scale=0.8,midway,above]{volume};
+
+%\node at (A) {A};
+%\node at (B) {B};
+%\node at (C) {C};
+%\node at (D) {D};
+%\node at (E) {E};
+%\node at (F) {F};
+%\node at (G) {G};
+\end{scope}
+
+\end{tikzpicture}

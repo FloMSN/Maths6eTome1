@@ -2,6 +2,9 @@
 %\section{Une section}
 
 % remarque : pour qu'un mot se retrouve dans le lexique : \MotDefinition{asymptote horizontale}{} 
+
+\prof{les exercices rituels de ce chapitre porteront sur les notations.}
+
 \begin{definition}
 Un \MotDefinition{triangle isocèle}{} est un triangle qui a deux côtés égaux;
 
@@ -10,7 +13,35 @@ un \MotDefinition{triangle équilatéral}{} est un triangle qui a trois côtés 
 un \MotDefinition{triangle rectangle}{} est un triangle qui a deux côtés perpendiculaires.
 \end{definition}
 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{methode*1}[Construire un triangle]
+Pour construire un triangle, il faut toujours connaître 3 informations à propos de ce triangle dont une longueur:
+\begin{itemize}
+    \item 3 longueurs
+    \item 2 longueurs et un angle
+    \item 1 longueur et 2 angles
+\end{itemize}
+Parfois, un angle ou des longueurs sont sous-entendus dans la description du triangle (rectangle, isocèle, équilatéral).
+\begin{enumerate}
+    \item On commence TOUJOURS par faire un dessin à main levée sur lequel on reporte TOUTES les informations données sous forme de \textcolor{red}{codage}. Ce dessin n'a pas besoin d'être en vraies grandeurs; il sert simplement à rendre les choses plus visuelles.
+    \item Pour tracer la figure en vraies grandeurs, on commence TOUJOURS par tracer un segment de longueur donnée.
+    \item Les étapes suivantes dépendent des informations données. Un fois la figure tracée, on ne doit pas oublier de reporter le \textcolor{red}{codage}. Il est inutile de reporter les valeurs des longueurs.\\
+\end{enumerate}
+\exercice
+Tracer les dessins à main levée des triangles suivants, sans oublier les codages:\\
+\begin{enumerate}
+    \item Le triangle ABC tel que AB=5cm, BC=4,5cm et l'angle $\widehat{BAC}=63°$.
+    \item Le triangle GAZ tel que GA=3,5cm, AZ=5cm et AC=4cm.
+    \item Le triangle BUT tel que BU=6cm, l'angle $\widehat{UBT}=80°$ et $\widehat{BUT}=20°$.
+    \item Le triangle RIZ, isocèle en Z tel que $\widehat{IRZ}=35°$ et RI=4cm.
+    \item Le triangle POT, rectangle en P tel que PO=4cm et $\widehat{PTO}=50°$
+\end{enumerate}
+\end{methode*1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{methode*1}[Avec 3 longueurs]
 
 \begin{exemple*1}
 Construis un triangle $KLM$ tel que $KL = 6$ cm ; $LM = 5$ cm et $KM = 4,5$ cm :
@@ -19,7 +50,8 @@ On trace une figure à \textbf{main levée} :
 \begin{center} \includegraphics[width=2.3cm]{triangleKML} \end{center}
 
 \begin{tabularx}{\textwidth}{X|X|X}
- \includegraphics[width=3.1cm]{regleKL} &  \includegraphics[width=3.1cm]{compasKL} & \includegraphics[width=3.1cm]{compasKML} \\ 
+ \input{./Triangles/figures/ConstruireTriangle_1} &  \input{./Triangles/figures/ConstruireTriangle_2} & 
+ \input{./Triangles/figures/ConstruireTriangle_3} \\ 
  On trace un segment $[KL]$ de longueur 6 cm. & Le point $M$ est à 5 cm du point $L$ : il appartient au cercle de centre $L$ et de rayon 5 cm. & Le point $M$ est à 4,5 cm du point $K$ : il appartient au cercle de centre $K$ et de rayon 4,5 cm. \\
 \end{tabularx} \\
 
@@ -46,39 +78,8 @@ $UN = 8$ cm et $NO = 3,6$ cm.
 %\correction
  
 \end{methode*1}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{methode*1}[Construire un triangle rectangle]
-
-\begin{exemple*1}
-Construis un triangle $KHI$ rectangle en $K$ tel que $KI = 5$ cm et $HI = 7$ cm : \\[1em]
-\begin{tabularx}{\textwidth}{X|X|X|X}
- On trace un segment $[KI]$ de longueur 5 cm (dessins suivants agrandis). & On trace la droite perpendiculaire en $K$ à $(KI)$ et on code l'angle droit. & On trace un arc de cercle de centre $I$ et de rayon 7 cm coupant la perpendiculaire en $H$. & On trace le segment $[HI]$.\\
- \includegraphics[width=2.2cm]{regle5} & \includegraphics[width=1.8cm]{equerreKI} & \includegraphics[width=2cm]{compasKI} & \includegraphics[width=1.8cm]{triangleHKI} \\ 
-\end{tabularx} \\
-
-\end{exemple*1}
-
-\exercice 
-Construis un triangle $MDR$ rectangle en $D$ tel que :
-
-$MD = 4,2$ cm et $DR = 7,1$ cm. 
-\vspace{4cm}
-%\correction
- 
-\exercice
-Construis un triangle $ILE$ rectangle en $E$ tel que :
-
-$EL = 6,4$ cm et $LI = 9,3$ cm.
-\vspace{2cm}
-%\correction
- 
-\end{methode*1}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{methode*1}[Construire un triangle connaissant un angle et les longueurs \\ de ses côtés adjacents]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{methode*1}[Avec 2 longueurs et 1 angle]
 
  \begin{exemple*1}
 Construis un triangle $BAS$ tel que :
@@ -106,11 +107,8 @@ $SL = 6,4$ cm ; $\widehat{SLE}= 124^\circ$ et $LE = 7,9$ cm.
 %\correction
  
 \end{methode*1}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{methode*1}[Construire un triangle connaissant deux angles et la longueur \\ de leur côté commun]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{methode*1}[Avec 1 longueur et 2 angles]
 
  \begin{exemple*1}
 Construis le triangle $GAZ$ tel que :
@@ -139,17 +137,18 @@ $ET = 4,6$ cm ; $\widehat{SET} = 93^\circ$ et $\widehat{ETS} = 34^\circ$.
  
 \end{methode*1}
 
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\prof{
+\prof{
 \begin{activite}[Manipulation: les droites remarquables dans le triangle]
 \underline{Le but:} A l'aide de ficelles, construire d'abord un triangle quelconque puis placer les droites remarquables. Nommer le point d'intersection de ces droites.
 
-\underline{Attention:} Prévoir un lieu suffisament grand pour que les élèves puissent travailler au sol, par groupe.\\
+\underline{Attention:} Prévoir un lieu suffisamment grand pour que les élèves puissent travailler au sol, par groupe.\\
 
 Constituer 4 groupes de travail.\\
 \underline{Matériel(par groupe):}
 \begin{itemize}
-\item 1 grande corde "fermeé"
+\item 1 grande corde "fermée"
 \item 3 petites cordes colorées
 \end{itemize}
 \underline{Matériel(pour la classe):}
@@ -165,7 +164,7 @@ Donner à chaque groupe une corde "triangle" et un lot de trois cordes  "droites
 \item \underline{médianes:} Demander aux élèves de placer une corde qui passe par un sommet du triangle et qui coupe le côté opposé en son milieu. Faire les 3 médianes. Distribuer une étiquette "médianes" et "centre de gravité" à chaque groupe. Faire une photo.
 \item \underline{hauteurs:} Demander aux élèves de placer une corde qui passe par un sommet et qui coupe le côté opposé perpendiculairement. Faire les 3 hauteur. Distribuer une étiquette "hauteurs" et "orthocentre" à chaque groupe. Faire une photo.
 \item \underline{bissectrices:} Demander aux élèves de placer une corde qui coupe l'angle en deux parties égales. Faire les 3 hauteurs. Distribuer une étiquette "hauteurs" et "centre du cercle inscrit" à chaque groupe. Faire une photo.\\\\
-Le travail du professeur est alors de construire un livret contenant une photo d'illustration de chacune des droites, la définition et un schéma réacapitulatif, personnalisé pour chaque groupe.
+Le travail du professeur est alors de construire un livret contenant une photo d'illustration de chacune des droites, la définition et un schéma récapitulatif, personnalisé pour chaque groupe.
 \end{itemize}
 Attention: des explications complémentaires intermédiaires sont indispensables. Notamment préciser la nature de ces droite (demi-droite), en faisant bien attention que les cordes matérialisant les bissectrices partent du sommet de l'angle alors que les autre droites dépassent.
 \underline{déroulement (version 2: bilan fin de séance):} Prévoir une période de cours.\\
@@ -174,11 +173,11 @@ Distribuer à chaque groupe une étiquette "droites".\\
 Trois élèves doivent maintenir au sol les trois sommets du triangle. Les autres élèves du groupe, doivent alors placer le plus précisément possible, les trois droites remarquables indiquées sur leur étiquette.\\
 Attention: il faut bien expliquer aux élèves "sommets" qu'ils ne doivent pas bouger sinon le triangle change et tout le travail est à recommencer.\\
 Un fois que les trois droites sont matérialisées, les élèves appellent le professeur qui vérifie leur travail et les questionne sur le point d'intersection. On place en suite l'étiquette "p. d'intersection". On prend une photo souvenir!\\\\
-Le travail du professeur est alors de construire un livret contenant une photo d'illustration de chacune des droites, la définition et un schéma réacapitulatif.
+Le travail du professeur est alors de construire un livret contenant une photo d'illustration de chacune des droites, la définition et un schéma récapitulatif.
 
 
 \end{activite}
-%}
+}
 
 
 
@@ -224,14 +223,6 @@ Construis le triangle $EAU$ et son cercle circonscrit sachant que : $EA = 6,1$ c
 %\correction
 
 \end{methode*1}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Médiane
-
-
-\newpage
 
 \begin{definition}
 Dans un triangle, une \MotDefinition{médiane}{} est une droite qui passe par un sommet du triangle et par le milieu du côté opposé à ce sommet.

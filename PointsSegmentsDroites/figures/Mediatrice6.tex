@@ -1,0 +1,21 @@
+
+
+\begin{tikzpicture}[scale=0.2,rotate=50,every node/.style={scale=1.2}]
+
+\draw [very thick](-0.5,0.5)--(6.5,0.5);
+\draw (0,0.5)--+(90:0.4)--+(-90:0.4);
+\draw (6,0.5)--+(90:0.4)--+(-90:0.4);
+\draw (0,0.5) node[above left]{A};
+\draw (6,0.5) node[above]{B};
+
+\draw [style=dashed,color=blue,thick](4,5.083) arc (110:250:5);
+\draw [style=dashed,color=blue,thick](2,5.083) arc (70:-70:5);
+%\draw (3,6)--(3,-6);
+
+\coordinate (A) at (0,0.5) ;
+\coordinate (B) at (2,5.083) ;
+\begin{scope}[scale=.8]
+\Compas{A}{B}
+\end{scope}
+
+\end{tikzpicture}
